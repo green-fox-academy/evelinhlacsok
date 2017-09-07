@@ -1,0 +1,23 @@
+table {
+    color: white;
+    font-size: 36px;
+    font-weight: lighter;
+    border: 15px solid #347BFB;
+    width: 350px;
+    height: 255px;
+    text-align: center;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+
+}
+
+table:nth-child(1) {
+    background-color: #F76870;
+}
+
+table:nth-child(2) {
+    background-color: #A9E6E6;
+}
+
+
