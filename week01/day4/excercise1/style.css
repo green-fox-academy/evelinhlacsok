@@ -1,0 +1,12 @@
+div {
+    font-size: 36px;
+    color: #005768;
+    font-family: sans-serif;
+    font-weight: lighter;
+    background: #0094a4;
+    padding: 10px 30px 20px 10px;
+    margin: 10px;
+    border: 6px solid #6dc682;
+    width: 345px;
+    height: 100px;
+}
