@@ -1,0 +1,35 @@
+main {
+    width: 380px;
+}
+
+h1 {
+    color: #FF6347;
+    font-size: 24px;
+    font-family: 'Roboto Slab', serif;    
+}
+
+h2 {
+    color: #8A2BE2;
+    font-size: 18px;
+    font-family: 'Roboto Slab', serif; 
+}
+p {
+    font-family: 'Roboto Slab', serif;   
+    font-size: 12px; 
+}
+
+ol li{
+    color: #FF32FF;
+    text-decoration: underline;
+}   
+
+ol li:last-child {
+    color:black;
+    text-decoration: underline;
+}
+
+
+li {
+    font-size: 12px;
+    font-family: 'Roboto Slab', serif;    
+}
