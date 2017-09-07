@@ -1,0 +1,29 @@
+body {
+    color: white;
+}
+
+table {
+    padding-bottom: 20px;
+    border-spacing: 0.3cm;
+}
+
+td {
+    border-radius: 50%;
+    background-color: #0CEBDE;
+    text-align: center;
+    width: 130px;
+    height: 130px;
+    font-size: 28px;  
+}
+
+tr {
+    border-bottom: 20px;    
+}
+
+.purple {
+    background-color: #B90CEB;
+}
+
+.yellow {
+    background-color: #EBBE0C
+}
