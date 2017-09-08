@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ .content-box {
+    margin: auto;
+    background: #DDD6CC;
+    position: absolute;
+    width: 660px;
+    height: 1000px;        
+  }
+
+ .input1 {
+      background: yellow;
+      width: 620px;
+      height: 30px;
+      color: red;
+      box-sizing: content-box;
+      position: relative;
+      margin: 0 auto;
+      top: 5%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 24px;
+      font-weight: lighter;
+      color: purple;
+  
+  }
+
+  .input2 {
+    background: yellow;
+    width: 280px;
+    height: 400px;
+    position: relative;
+    float: left;
+    top: 10%;
+    left: 20px;
+  }
+.header {
+  background-color: #958A97;
+  color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 35px;
+}
+.title {
+  color: purple;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold; 
+  padding-top: 10px;
+}
+.fill {
+  background-color: white;
+  border: 1px solid black;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+  .inner-box1 {
+    border: 1px solid black;
+    width: 50%;
+    height: 60px;
+    position: relative;
+    float: left;
+    top: 5%;
+  
+  }
+  .inner-box2 {
+    border: 1px solid black;
+    width: 50%;
+    height: 60px;
+    position: relative;
+    float: right;
+    top: 5%;
+  }
+  .inner-box3 {
+    border: 1px solid black;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    float: right;
+    top: 25%;
+  }
+  .input3 {
+    background: yellow;
+    width: 280px;
+    height: 400px;
+    float: right;
+    position: relative;
+    top: 10%;    
+    right: 20px;
+  }
+
+  .input4 {
+    background: yellow;
+    width: 620px;
+    height: 200px;
+    position: relative;
+    top: 55%;
+    left: 20px;
+  }
