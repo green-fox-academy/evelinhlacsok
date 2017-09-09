@@ -13,7 +13,7 @@
   }
 
  .input1 {
-      background: yellow;
+      background-color: #bdb3bf;
       width: 620px;
       height: 30px;
       color: red;
@@ -29,7 +29,7 @@
   }
 
   .input2 {
-    background: yellow;
+    background-color: #bdb3bf;
     width: 280px;
     height: 400px;
     position: relative;
@@ -53,10 +53,12 @@
 }
 .fill {
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid #958A97;
   height: 35px;
   border-radius: 5px;
   margin-top: 10px;
+  color: #958A97;
+  font-family: Arial, Helvetica, sans-serif
 }
 
   .inner-box1 {
@@ -85,7 +87,7 @@
     top: 25%;
   }
   .input3 {
-    background: yellow;
+    background-color: #bdb3bf;
     width: 280px;
     height: 400px;
     float: right;
@@ -95,7 +97,7 @@
   }
 
   .input4 {
-    background: yellow;
+    background-color: #bdb3bf;
     width: 620px;
     height: 200px;
     position: relative;
