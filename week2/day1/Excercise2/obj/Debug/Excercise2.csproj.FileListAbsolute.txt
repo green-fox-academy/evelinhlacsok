@@ -1,0 +1,6 @@
+/Users/evelinhlacsok/Documents/greenfox/evelinhlacsok/week2/day1/Excercise2/bin/Debug/Excercise2.exe
+/Users/evelinhlacsok/Documents/greenfox/evelinhlacsok/week2/day1/Excercise2/bin/Debug/Excercise2.pdb
+/Users/evelinhlacsok/Documents/greenfox/evelinhlacsok/week2/day1/Excercise2/obj/Debug/Excercise2.csprojResolveAssemblyReference.cache
+/Users/evelinhlacsok/Documents/greenfox/evelinhlacsok/week2/day1/Excercise2/obj/Debug/Excercise2.csproj.CoreCompileInputs.cache
+/Users/evelinhlacsok/Documents/greenfox/evelinhlacsok/week2/day1/Excercise2/obj/Debug/Excercise2.exe
+/Users/evelinhlacsok/Documents/greenfox/evelinhlacsok/week2/day1/Excercise2/obj/Debug/Excercise2.pdb
