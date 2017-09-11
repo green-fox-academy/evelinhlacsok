@@ -4,12 +4,12 @@
 	<PropertyGroup>
 		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>{9C97B504-3637-4B60-91DF-AF496768D2B7}</ProjectGuid>
+		<ProjectGuid>{AE78475C-0445-40AA-BA36-5F710010BF2A}</ProjectGuid>
                 <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
 		<OutputType>Exe</OutputType>
 		<AppDesignerFolder>Properties</AppDesignerFolder>
-		<RootNamespace>Excerckse</RootNamespace>
-		<AssemblyName>Excerckse</AssemblyName>
+		<RootNamespace>Excercise6</RootNamespace>
+		<AssemblyName>Excercise6</AssemblyName>
 		<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
 		<FileAlignment>512</FileAlignment>
 	</PropertyGroup>
