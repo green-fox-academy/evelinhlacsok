@@ -11,10 +11,7 @@ namespace Lists02
             var boys = new List<string> {"Joe", "Fred", "Béla", "Todd", "Neef", "Jeff"};
             var order = new List<string>();
 
-            for (int i = 0; i < UPPER; i++)
-            {
-                
-            }
+            var combined = girls.(boys);
             
 
             // Join the two lists by matching one girl with one boy in the order list
