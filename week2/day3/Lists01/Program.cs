@@ -9,13 +9,18 @@ namespace Lists01
         {
             var planetList = new List<string> { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Uranus",
                 "Neptune" };
-            planetList = planetList.Insert("Saturn")
-        
-
+            planetList.Insert(5, "Saturn");
+            foreach (var planet in planetList)
+            {
+                Console.WriteLine(planet);
+            }
+            {
+                
+            }
+                
             // Saturn is missing from the planetList
             // Insert it into the correct position
 
-            Console.WriteLine(planetList);
         }
     }
 }
