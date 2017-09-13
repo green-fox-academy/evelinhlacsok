@@ -11,7 +11,7 @@ namespace Factorial
             //   that returns it's input's factorial
 
         {
-            int number = 5;
+            int number = 7;
             
             Console.WriteLine(factorial(number));
         }

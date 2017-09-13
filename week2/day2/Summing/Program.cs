@@ -10,7 +10,7 @@ namespace Summing
             // - Write a function called `sum` that sum all the numbers
             //   until the given parameter
             
-            int number = 5;
+            int number = 8;
             
             Console.WriteLine(Sum(number));
         }
