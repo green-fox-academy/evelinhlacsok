@@ -13,7 +13,7 @@ namespace Strings04
             todo = todo.Insert(0, "My todo:\n");
             todo = todo.Insert(todo.Length, "Download games\n");
             StringBuilder todo2 = new StringBuilder(todoText + todo);
-            todo2 = todo.Insert(todo.Length, "Diablo");
+            todo2 = todo.Insert(todo.Length, "\tDiablo");
           
            
            // todoText = todoText.Insert(1, "My todo: ");
