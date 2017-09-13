@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace Lists02
 {
@@ -11,7 +12,7 @@ namespace Lists02
             var boys = new List<string> {"Joe", "Fred", "Béla", "Todd", "Neef", "Jeff"};
             var order = new List<string>();
 
-            var combined = girls.(boys);
+            Console.WriteLine();
             
 
             // Join the two lists by matching one girl with one boy in the order list
