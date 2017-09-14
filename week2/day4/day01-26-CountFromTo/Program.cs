@@ -28,7 +28,7 @@ namespace day01_26_CountFromTo
             Console.WriteLine("and the second number");
             int secondnumber = int.Parse(Console.ReadLine());
 
-            if (secondnumber < firstnumber)
+            if (secondnumber < firstnumber)                                                                   
             {
                 Console.WriteLine("The second number should be bigger");
             }
