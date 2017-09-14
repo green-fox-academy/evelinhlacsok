@@ -12,8 +12,19 @@ namespace Lists02
             var boys = new List<string> {"Joe", "Fred", "Béla", "Todd", "Neef", "Jeff"};
             var order = new List<string>();
 
-            Console.WriteLine();
-            
+            for (int i = 0; i < boys.Count; i++)
+            {
+                if (girls.Count > i)
+                {
+                    order.Add(girls[i]);
+                }
+          
+                order.Add(boys[i]);
+            }
+            foreach (var correctorder in order)
+            {
+                Console.WriteLine(correctorder);
+            }
 
             // Join the two lists by matching one girl with one boy in the order list
             // Exepected output: "Eve", "Joe", "Ashley", "Fred"...
