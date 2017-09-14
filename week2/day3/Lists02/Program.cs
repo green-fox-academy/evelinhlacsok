@@ -23,7 +23,7 @@ namespace Lists02
             }
             foreach (var correctorder in order)
             {
-                Console.WriteLine(correctorder);
+                Console.Write(correctorder + ", ");
             }
 
             // Join the two lists by matching one girl with one boy in the order list
