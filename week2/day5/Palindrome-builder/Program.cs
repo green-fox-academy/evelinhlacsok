@@ -15,6 +15,9 @@ namespace Palindrome_builder
             string input = Console.ReadLine();
             
             Console.WriteLine(input + Palindrome(input));
+            
+            //Console.WriteLine(Palindrome("greenfox"));
+            //Console.WriteLine(Palindrome("fox"));
 
             Console.ReadLine();
 
@@ -22,7 +25,12 @@ namespace Palindrome_builder
 
         public static string Palindrome(string userinput)
         {
-             char[] chars = userinput.ToCharArray();
+            //userinput.Reverse();
+            char[] chars = userinput.ToCharArray();
+            Array.Reverse(chars);
+            return new string(chars);
+            
+            /* char[] chars = userinput.ToCharArray();     // mondatfordítós feladat alapján
             int j = chars.Length - 1;
             for (int i = 0; i < chars.Length/2; i++)
             {
@@ -31,7 +39,8 @@ namespace Palindrome_builder
                 chars[j] = temp;
                 j--;
             }
-            return new string(chars);
+            
+            return new string(chars); */
         }
     }
 }
