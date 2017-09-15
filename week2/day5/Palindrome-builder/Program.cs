@@ -16,11 +16,22 @@ namespace Palindrome_builder
             
             Console.WriteLine(input + Palindrome(input));
 
+            Console.ReadLine();
+
         }
 
         public static string Palindrome(string userinput)
         {
-            return userinput;
+             char[] chars = userinput.ToCharArray();
+            int j = chars.Length - 1;
+            for (int i = 0; i < chars.Length/2; i++)
+            {
+                char temp = chars[i];
+                chars[i] = chars[j];
+                chars[j] = temp;
+                j--;
+            }
+            return new string(chars);
         }
     }
 }
