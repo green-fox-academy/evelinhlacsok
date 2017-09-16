@@ -11,9 +11,10 @@ namespace Factorial
             //   that returns it's input's factorial
 
         {
-            int number = 7;
+            Console.WriteLine("Enter a number, so I can tell the factorial of it!");
+            int number = int.Parse(Console.ReadLine());
             
-            Console.WriteLine(factorial(number));
+            Console.WriteLine("the factorial is: " + factorial(number));
         }
 
         public static int factorial(int number)
