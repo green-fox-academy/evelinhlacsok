@@ -31,28 +31,28 @@ namespace day01_29_DrawPyramid
                 }
                 for (int k = 1; k <= i; k++)
                 {
-                    Console.Write(i);
+                    Console.Write("*");
                     Console.Write(" ");
                 }
                 Console.WriteLine();
+
             }
-               
-            {
-                /* for (int j = 0; j < number - i; j++)
-                {
-                    Console.Write(" ");
-                }
-                for (int k = 0; k < number +1 ; k++)
-                {
-                    Console.Write("*");
-                }
-                for (int l = 0; l < number + i; l++)
-                {
-                    Console.Write(" ");
-                }
-                
-                Console.WriteLine(); */
-            }
+           
+           //*  {  
+             //    for (int j = 0; j < number - i; j++)
+                // {
+               //      Console.Write(" ");
+               //  }
+               //  for (int k = 0; k < number *2; k++)
+               //  {
+              ///       Console.Write("*");
+              ///   }
+              //   for (int l = 0; l < (number - i)-1; l++)
+               //  {
+               //      Console.Write(" ");
+               //  }
+            //*
+            // }
         }
     }
 }
