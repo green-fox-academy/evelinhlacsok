@@ -25,13 +25,17 @@ namespace WriteMultipleLines
 		}
         public static void MultipleLines (string path, string word, int number)
         {
-            using (StreamWriter writer = new StreamWriter(path)) 
+            try
             {
-                for (int i = 0; i < number; i++)
-                {
-                    writer.WriteLine(word);
-                }
+				using (StreamWriter writer = new StreamWriter(path))
+				{
+					for (int i = 0; i < number; i++)
+					{
+						writer.WriteLine(word);
+					}
+				}
             }
+
             catch (Exception)
             {
                 Console.WriteLine("Unable to write file");
