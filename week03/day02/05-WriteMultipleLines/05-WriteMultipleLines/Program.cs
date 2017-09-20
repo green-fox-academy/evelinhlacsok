@@ -23,7 +23,7 @@ namespace WriteMultipleLines
            // Console.ReadLine();
 
 		}
-        public static void MultipleLines (string path, string word, int number)
+        private static void MultipleLines (string path, string word, int number)
         {
             try
             {
