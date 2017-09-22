@@ -12,6 +12,7 @@ namespace _11_PurpleSteps
         {
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
+            Random random = new Random();
 
             double x = 20;
             double y = 20;
@@ -20,13 +21,20 @@ namespace _11_PurpleSteps
             {
                for (int j = 0; y < canvas.Height / 3 * 2; i++)
                {
-                    foxDraw.FillColor(Colors.Purple);
+                    foxDraw.FillColor(RandomColor(random));
                     foxDraw.StrokeColor(Colors.Black);
                     foxDraw.DrawRectangle(x, y, 20, 20);
                     x += 20;
                     y += 20;
                 }
             }
+        }
+        public Color RandomColor(Random random)
+        {
+            return Color.FromArgb((byte)random.Next(255),
+                                 (byte)random.Next(255),
+                                 (byte)random.Next(255),
+                                 (byte)random.Next(255));
         }
     }
 }
