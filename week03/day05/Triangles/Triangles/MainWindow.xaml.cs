@@ -12,23 +12,34 @@ namespace Triangles
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
             foxDraw.BackgroundColor(Colors.Gold);
-
+            int level = 5;
             int size = 600;
 
-            foxDraw.DrawLine(0, 0, size, 0);
-            foxDraw.DrawLine(size, 0, size/2, size);
-            foxDraw.DrawLine(size/2, size, 0, 0);
+            DrawTriangles(foxDraw, size, 0, 0, level);
+          //  DrawTriangles.DrawLine(foxDraw, size, 0, size / 2, size);
+          //  DrawTriangles.DrawLine(foxDraw, size / 2, size, 0, 0);
 
 
         }
-        private void DrawTriangles (FoxDraw triangles, int size)
+        private void DrawTriangles(FoxDraw triangles, int size, int x, int y, int level)
         {
-            triangles.StrokeColor(Colors.Black);
-            triangles.DrawLine(size / 2, 0, size / 4 * 3, size / 2);
-            triangles.DrawLine(size / 4 * 3, size / 2, size / 4, size / 2);
-            triangles.DrawLine(size / 4, size / 2, size / 2, 0);
+            if (level > 0)
+            {
+                triangles.DrawLine(x + size / 2, y, x + size / 4 * 3, y + size / 2);
+                triangles.DrawLine(x + size / 4 * 3, y + size / 2, x + size / 4, y + size / 2);
+                triangles.DrawLine(x + size / 4, y + size / 2, x + size / 2, y);
 
-            return triangles;
+                // TODO: nagy haromszog
+
+                //triangles.DrawLine(x, y, size, y);
+                //triangles.DrawLine(size, y, x + size / 2, y+size);
+                //triangles.DrawLine(x + size / 2, y+size, x, y);
+
+                DrawTriangles(triangles, size / 2, x, y, level - 1);
+                DrawTriangles(triangles, size / 2, x + size / 2, y, level - 1);
+                DrawTriangles(triangles, size / 2, x + size / 4, y + size / 2, level -1);
+
+            }
         }
     }
 }
