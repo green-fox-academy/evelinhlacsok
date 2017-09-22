@@ -11,19 +11,30 @@ namespace _10_RainbowBoxes
         {
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
+            Random random = new Random();
             // create a square drawing function that takes 2 parameters:
             // the square size, and the fill color,
             // and draws a square of that size and color to the center of the canvas.
             // create a loop that fills the canvas with rainbow colored squares.
 
-            DrawSquare(foxDraw, 250, Colors.Magenta);
-            DrawSquare(foxDraw, 150, Colors.Gold);
-            DrawSquare(foxDraw, 60, Colors.Aquamarine);
+            for (int size = 600;  size>= 0; size -= 20)
+            {
+                DrawSquare(foxDraw, size, RandomColor(random));
+            }
 
         }
+         public Color RandomColor (Random random)
+        {
+            return Color.FromArgb((byte)random.Next(255),
+                                 (byte)random.Next(255),
+                                 (byte)random.Next(255),
+                                 (byte)random.Next(255));
+        }
+
         private void DrawSquare (FoxDraw squarez, int size, Color color)
         {
             squarez.FillColor(color);
+            squarez.StrokeColor(Colors.White);
             squarez.DrawRectangle((canvas.Width-size)/2, (canvas.Height-size)/2, size, size);
 
         }
