@@ -33,10 +33,19 @@ namespace Triangles
         {
             if (level > 0)
             {
-                triangles.StrokeColor(Colors.BlueViolet);
+                triangles.StrokeColor(color);
+                Point top = new Point(x + size / 2, y);
+                Point right = new Point(x + size / 3 * 4, y + size / 2);
+                Point left = new Point(x + size / 4, y + size / 2);
+                
+
                 triangles.DrawLine(x + size / 2, y, x + size / 4 * 3, y + size / 2);
                 triangles.DrawLine(x + size / 4 * 3, y + size / 2, x + size / 4, y + size / 2);
                 triangles.DrawLine(x + size / 4, y + size / 2, x + size / 2, y);
+
+                triangles.DrawPolygon(top, right, left);
+               
+                
 
                 // TODO: nagy haromszog
 

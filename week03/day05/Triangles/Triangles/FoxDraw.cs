@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -72,6 +73,11 @@ namespace GreenFox
             };
 
             Canvas.Children.Add(line);
+        }
+
+        internal void DrawPolygon(Point top, Point right, Point left)
+        {
+            throw new NotImplementedException();
         }
 
         public void DrawPolygon(IEnumerable<Point> points)
