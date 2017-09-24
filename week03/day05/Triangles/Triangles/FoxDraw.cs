@@ -75,10 +75,7 @@ namespace GreenFox
             Canvas.Children.Add(line);
         }
 
-        internal void DrawPolygon(Point top, Point right, Point left)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public void DrawPolygon(IEnumerable<Point> points)
         {

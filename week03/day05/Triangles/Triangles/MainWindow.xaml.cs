@@ -16,7 +16,7 @@ namespace Triangles
             int size = 600;
             Random random = new Random();
 
-            DrawTriangles(foxDraw, size, 0, 0, level, RandomColor(random));
+            DrawTriangles(foxDraw, size, 0, 0, level, RandomColor(random), random);
             //  DrawTriangles.DrawLine(foxDraw, size, 0, size / 2, size);
             //  DrawTriangles.DrawLine(foxDraw, size / 2, size, 0, 0);
 
@@ -29,7 +29,7 @@ namespace Triangles
                                  (byte)random.Next(255),
                                  (byte)random.Next(255));
         }
-        private void DrawTriangles(FoxDraw triangles, int size, int x, int y, int level, Color color)
+        public static void DrawTriangles(FoxDraw triangles, int size, int x, int y, int level, Color color, Random random)
         {
             if (level > 0)
             {
@@ -43,9 +43,10 @@ namespace Triangles
                 triangles.DrawLine(x + size / 4 * 3, y + size / 2, x + size / 4, y + size / 2);
                 triangles.DrawLine(x + size / 4, y + size / 2, x + size / 2, y);
 
-                triangles.DrawPolygon(top, right, left);
+                FoxDraw.DrawPolygon(top, right, left);
                
-                
+
+               // triangles.FillColor(RandomColor(random));
 
                 // TODO: nagy haromszog
 
@@ -53,9 +54,9 @@ namespace Triangles
                 triangles.DrawLine(x + size, y, x + size / 2, y + size);
                 triangles.DrawLine(x + size / 2, y + size, x, y);
 
-                DrawTriangles(triangles, size / 2, x, y, level - 1, color);
-                DrawTriangles(triangles, size / 2, x + size / 2, y, level - 1, color);
-                DrawTriangles(triangles, size / 2, x + size / 4, y + size / 2, level - 1, color);
+                DrawTriangles(triangles, size / 2, x, y, level - 1, color, random);
+                DrawTriangles(triangles, size / 2, x + size / 2, y, level - 1, color, random);
+                DrawTriangles(triangles, size / 2, x + size / 4, y + size / 2, level - 1, color, random);
 
             }
 
