@@ -1,0 +1,35 @@
+﻿using System;
+
+namespace GreenFoxOrganization
+{
+    public class Student : Person
+    {
+        private string previousOrganization;
+        private int skippedDays;
+        
+        public Student(string name = "Jane Doe", int age = 30, string gender = "female", string previousOrganization = 
+            "School of life", int skippedDays = 0)
+        {
+  
+        }
+
+        public new void GetGoal()
+        {
+            Console.WriteLine("Be a junior software developer.");
+            
+        }
+
+        public new void Introduce()
+        {
+            Console.WriteLine("Hi, I'm " + name + ", a " + age + "year old " + gender + "from " + previousOrganization + 
+            "who skipped " + skippedDays + "days from the course already.");
+        }
+
+        public int SkipDays(int numberOfDays)
+        {
+            return skippedDays += numberOfDays;
+        }
+       
+
+    }
+}
