@@ -11,7 +11,11 @@ namespace Sum
     {
 
         public int ListOfIntegers(List<int> inputList)
-        { 
+        {
+            if (inputList == null)
+            {
+                return 0;
+            }
             return inputList.Sum();
         }
     }
