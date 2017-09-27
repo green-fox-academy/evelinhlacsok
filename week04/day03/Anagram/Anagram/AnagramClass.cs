@@ -15,16 +15,16 @@ namespace Anagram
             secondword = secondword.ToLower();
 
             //making the arrays from the strings 
-            char[] array1 = firstword.ToCharArray();
-            char[] array2 = secondword.ToCharArray();
+            char[] array1stword = firstword.ToCharArray();
+            char[] array2ndword = secondword.ToCharArray();
 
             //sorting the arrays
-            Array.Sort(array1);
-            Array.Sort(array2);
+            Array.Sort(array1stword);
+            Array.Sort(array2ndword);
 
             //turning arrays to strings
-            string sorted_firstword = new string(array1);
-            string sorted_secondword = new string(array2);
+            string sorted_firstword = new string(array1stword);
+            string sorted_secondword = new string(array2ndword);
 
             if (sorted_firstword == sorted_secondword)
             {
