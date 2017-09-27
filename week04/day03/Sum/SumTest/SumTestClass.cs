@@ -14,7 +14,7 @@ namespace SumTest
         SumClass myOriginal = new SumClass();
 
         [Test]
-        public void listOfIntegers ()
+        public void ListOfIntegersTest()
         {
             //arrange
             List<int> inputList = new List<int> { 1, 2, 3, 4 };
