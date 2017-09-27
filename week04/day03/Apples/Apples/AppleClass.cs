@@ -13,7 +13,8 @@ namespace Apples
        // public string apple;
         public string GetApple ()
         {
-            return "apple";
+            string myObject = "apple";
+            return myObject;
         }
     }
 }
