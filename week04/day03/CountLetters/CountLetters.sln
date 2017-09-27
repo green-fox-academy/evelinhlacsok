@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountLetters", "CountLetters\CountLetters.csproj", "{D0E0145B-05C6-412F-956C-D5C0160A96DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountLettersTest", "CountLettersTest\CountLettersTest.csproj", "{0E64BDDC-B6DF-427E-A7B2-C52BC33F31DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0E0145B-05C6-412F-956C-D5C0160A96DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E0145B-05C6-412F-956C-D5C0160A96DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E0145B-05C6-412F-956C-D5C0160A96DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E0145B-05C6-412F-956C-D5C0160A96DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E64BDDC-B6DF-427E-A7B2-C52BC33F31DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E64BDDC-B6DF-427E-A7B2-C52BC33F31DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E64BDDC-B6DF-427E-A7B2-C52BC33F31DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E64BDDC-B6DF-427E-A7B2-C52BC33F31DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10A5BD46-F199-4D74-B59A-505EFFE408C3}
+	EndGlobalSection
+EndGlobal
