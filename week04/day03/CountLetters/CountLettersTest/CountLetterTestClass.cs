@@ -14,6 +14,18 @@ namespace CountLettersTest
         CountLetterClass myOriginal = new CountLetterClass();
 
         [Test]
-        public void 
+        public void DictonaryTester ()
+        {
+            Dictionary<char, int> output = new Dictionary<char, int>()
+            {
+                {'c', 2 },
+                {'a', 1 },
+                {'t', 1 },
+                {'u', 1 },
+                {'s', 1 }
+
+            };
+            Assert.AreEqual(output, myOriginal.MyLetterCounter("cactus"));
+        }
     }
 }
