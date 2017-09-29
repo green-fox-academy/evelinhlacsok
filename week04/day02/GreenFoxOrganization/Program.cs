@@ -29,32 +29,28 @@ namespace GreenFoxOrganization
 
             student.SkipDays(3);
 
-            for (int i = 0; i < 5; i++)
-            {
-                elon.Hire();
-            }
-            for (int i = 0; i < 3; i++)
-            {
-                sponsor.Hire();
-            }
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    elon.Hire();
+            //}
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    sponsor.Hire();
+            //}
 
             foreach (Person person in people)
             {
                 person.Introduce();
                 person.GetGoal();
-            //    person.SkipDays
             }
 
             PallidaClass alpaga = new PallidaClass("ALPAGA");
             alpaga.AddStudent(student);
             alpaga.AddStudent(john);
-           // alpaga.SkipDays();
             alpaga.AddMentor(mentor);
             alpaga.AddMentor(gandhi);
-         //   alpaga.add
             alpaga.Info();
             Console.ReadLine();
-
         }
     }
 }
