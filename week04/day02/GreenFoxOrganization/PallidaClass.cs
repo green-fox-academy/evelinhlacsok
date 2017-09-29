@@ -8,10 +8,12 @@ namespace GreenFoxOrganization
         private string className;
         //private int students = 0;
         //private int mentors = 0;
-      //  private string students;
-      //  private string mentors;
+        //  private string students;
+        //  private string mentors;
+
         private List<Student> StudentList = new List<Student>();
         private List<Mentor> MentorList = new List<Mentor>();
+     //   private List<StudentList, Mentor> PallidaClassStudentMentor = new List<Student, Mentor>;
 
         public PallidaClass(string className)
         {

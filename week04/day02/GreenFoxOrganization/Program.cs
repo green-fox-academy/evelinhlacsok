@@ -16,7 +16,7 @@ namespace GreenFoxOrganization
             people.Add(jane);
             Student john = new Student("John Doe", 20, "male", "BME");
             people.Add(john);
-            Student student = new Student("mary");
+            Student student = new Student("");
             people.Add(student);
             Mentor gandhi = new Mentor("Gandhi", 148, "male", "senior");
             people.Add(gandhi);
@@ -29,14 +29,14 @@ namespace GreenFoxOrganization
 
             student.SkipDays(3);
 
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    elon.Hire();
-            //}
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    sponsor.Hire();
-            //}
+            for (int i = 0; i < 5; i++)
+            {
+                elon.Hire();
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                sponsor.Hire();
+            }
 
             foreach (Person person in people)
             {

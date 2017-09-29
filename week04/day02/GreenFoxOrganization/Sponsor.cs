@@ -25,7 +25,7 @@ namespace GreenFoxOrganization
         }
         public new void Hire()
         {
-            Console.WriteLine(hiredStudents++);
+            hiredStudents++;
         }
 
         public override void GetGoal()
