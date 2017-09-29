@@ -12,11 +12,11 @@ namespace GreenFoxOrganization
 
             Person mark = new Person("Mark", 46, "male");
             people.Add(mark);
-            Person jane = new Person();
+            Person jane = new Person("");
             people.Add(jane);
             Student john = new Student("John Doe", 20, "male", "BME");
             people.Add(john);
-            Student student = new Student();
+            Student student = new Student("mary");
             people.Add(student);
             Mentor gandhi = new Mentor("Gandhi", 148, "male", "senior");
             people.Add(gandhi);
@@ -42,13 +42,16 @@ namespace GreenFoxOrganization
             {
                 person.Introduce();
                 person.GetGoal();
+            //    person.SkipDays
             }
 
             PallidaClass alpaga = new PallidaClass("ALPAGA");
             alpaga.AddStudent(student);
             alpaga.AddStudent(john);
+           // alpaga.SkipDays();
             alpaga.AddMentor(mentor);
             alpaga.AddMentor(gandhi);
+         //   alpaga.add
             alpaga.Info();
             Console.ReadLine();
 

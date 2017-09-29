@@ -19,9 +19,9 @@ namespace GreenFoxOrganization
             Console.WriteLine("Educate brilliant junior software developers.");
         }
 
-        public new void Introduce()
+        public override void Introduce()
         {
-            Console.WriteLine("Hi, I'm " + name + ", a " + age + " year old " + gender + level + " mentor.");
+            Console.WriteLine("Hi, I'm " + name + ", a " + age + " year old " + gender + " " + level + " mentor.");
         }
     }
 }

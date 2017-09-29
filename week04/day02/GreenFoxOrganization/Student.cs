@@ -22,7 +22,7 @@ namespace GreenFoxOrganization
             Console.WriteLine("Be a junior software developer.");   
         }
 
-        public new void Introduce()
+        public override void Introduce()
         {
             Console.WriteLine("Hi, I'm " + name + ", a " + age + " year old " + gender + " from " + previousOrganization + 
             " who skipped " + skippedDays + " days from the course already.");

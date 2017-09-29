@@ -18,17 +18,19 @@ namespace GreenFoxOrganization
             this.hiredStudents = hiredStudents;
         }
 
-
-        public new void Introduce()
+        public override void Introduce()
         {
             Console.WriteLine("Hi, I'm " + name + ", a " + age + " year old " + gender + " who represents " + company + " and " +
                               " hired " + hiredStudents + " students so far.");
         }
-
-        public int Hire()
+        public new void Hire()
         {
-            return hiredStudents++;
+            Console.WriteLine(hiredStudents++);
         }
+        //public int Hire()
+        //{
+        //    return hiredStudents++;
+        //}
 
         public new void GetGoal()
         {

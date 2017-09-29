@@ -13,7 +13,7 @@ namespace GreenFoxOrganization
             this.gender = gender;
         }
         
-        public void Introduce ()
+        public virtual void Introduce ()
         {
             Console.WriteLine("Hi, I'm " + name + ", a " + age + " year old " + gender + ".");
         }
