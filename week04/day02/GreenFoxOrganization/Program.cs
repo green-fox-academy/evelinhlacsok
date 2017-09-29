@@ -44,13 +44,14 @@ namespace GreenFoxOrganization
                 person.GetGoal();
             }
 
-            PallidaClass badass = new PallidaClass("BADA55");
-            badass.AddStudent(student);
-            badass.AddStudent(john);
-            badass.AddMentor(mentor);
-            badass.AddMentor(gandhi);
-            badass.Info();
+            PallidaClass alpaga = new PallidaClass("ALPAGA");
+            alpaga.AddStudent(student);
+            alpaga.AddStudent(john);
+            alpaga.AddMentor(mentor);
+            alpaga.AddMentor(gandhi);
+            alpaga.Info();
             Console.ReadLine();
+
         }
     }
 }

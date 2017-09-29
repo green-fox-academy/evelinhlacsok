@@ -19,14 +19,13 @@ namespace GreenFoxOrganization
 
         public new void GetGoal()
         {
-            Console.WriteLine("Be a junior software developer.");
-            
+            Console.WriteLine("Be a junior software developer.");   
         }
 
         public new void Introduce()
         {
-            Console.WriteLine("Hi, I'm " + name + ", a " + age + "year old " + gender + "from " + previousOrganization + 
-            "who skipped " + skippedDays + "days from the course already.");
+            Console.WriteLine("Hi, I'm " + name + ", a " + age + " year old " + gender + " from " + previousOrganization + 
+            " who skipped " + skippedDays + " days from the course already.");
         }
 
         public int SkipDays(int numberOfDays)

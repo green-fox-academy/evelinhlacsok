@@ -21,8 +21,8 @@ namespace GreenFoxOrganization
 
         public new void Introduce()
         {
-            Console.WriteLine("Hi, I'm " + name + ", a " + age + "year old " + gender + "who represents " + company + "and " +
-                              "hired " + hiredStudents + "students so far.");
+            Console.WriteLine("Hi, I'm " + name + ", a " + age + " year old " + gender + " who represents " + company + " and " +
+                              " hired " + hiredStudents + " students so far.");
         }
 
         public int Hire()

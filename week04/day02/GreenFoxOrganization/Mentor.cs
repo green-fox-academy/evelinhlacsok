@@ -21,7 +21,7 @@ namespace GreenFoxOrganization
 
         public new void Introduce()
         {
-            Console.WriteLine("Hi, I'm " + name + ", a" + age + "year old " + gender + level + "mentor.");
+            Console.WriteLine("Hi, I'm " + name + ", a " + age + " year old " + gender + level + " mentor.");
         }
     }
 }
