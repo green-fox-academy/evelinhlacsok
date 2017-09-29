@@ -10,7 +10,11 @@ namespace GreenFoxOrganization
         public Student(string name = "Jane Doe", int age = 30, string gender = "female", string previousOrganization = 
             "School of life", int skippedDays = 0)
         {
-  
+            base.name = name;
+            base.age = age;
+            base.gender = gender;
+            this.previousOrganization = previousOrganization;
+            this.skippedDays = skippedDays;
         }
 
         public new void GetGoal()

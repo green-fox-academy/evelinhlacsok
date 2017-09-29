@@ -11,7 +11,11 @@ namespace GreenFoxOrganization
         public Sponsor(string name = "Jane Doe", int age = 30, string gender = "female", string company =
             "Google", int hiredStudents = 0)
         {
-
+            base.name = name;
+            base.age = age;
+            base.gender = gender;
+            this.company = company;
+            this.hiredStudents = hiredStudents;
         }
 
 

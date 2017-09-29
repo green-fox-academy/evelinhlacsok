@@ -8,7 +8,10 @@ namespace GreenFoxOrganization
 
         public Mentor(string name = "Jane Doe", int age = 30, string gender = "female", string level = "intermediate")
         {
-            
+            base.name = name;
+            base.age = age;
+            base.gender = gender;
+            this.level = level;
         }
         
         public new void GetGoal()
