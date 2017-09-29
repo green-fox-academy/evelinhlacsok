@@ -14,7 +14,7 @@ namespace GreenFoxOrganization
             this.level = level;
         }
         
-        public new void GetGoal()
+        public override void GetGoal()
         {
             Console.WriteLine("Educate brilliant junior software developers.");
         }

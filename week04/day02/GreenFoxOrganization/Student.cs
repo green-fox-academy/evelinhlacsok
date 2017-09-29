@@ -17,7 +17,7 @@ namespace GreenFoxOrganization
             this.skippedDays = skippedDays;
         }
 
-        public new void GetGoal()
+        public override void GetGoal()
         {
             Console.WriteLine("Be a junior software developer.");   
         }

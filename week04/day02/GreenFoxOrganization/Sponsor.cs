@@ -27,12 +27,8 @@ namespace GreenFoxOrganization
         {
             Console.WriteLine(hiredStudents++);
         }
-        //public int Hire()
-        //{
-        //    return hiredStudents++;
-        //}
 
-        public new void GetGoal()
+        public override void GetGoal()
         {
             Console.WriteLine("Hire brilliant junior software developers.");
         }
