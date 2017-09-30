@@ -4,12 +4,12 @@
 	<PropertyGroup>
 		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>{E254FD9D-E2AA-4A78-8283-263022C20B33}</ProjectGuid>
+		<ProjectGuid>{5198382C-C0C9-42E0-A8CA-31F3BFA1362F}</ProjectGuid>
                 <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
 		<OutputType>Exe</OutputType>
 		<AppDesignerFolder>Properties</AppDesignerFolder>
-		<RootNamespace>week02_day02_Printer</RootNamespace>
-		<AssemblyName>week02_day02_Printer</AssemblyName>
+		<RootNamespace>week02_day02_Colors</RootNamespace>
+		<AssemblyName>week02_day02_Colors</AssemblyName>
 		<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
 		<FileAlignment>512</FileAlignment>
 	</PropertyGroup>
