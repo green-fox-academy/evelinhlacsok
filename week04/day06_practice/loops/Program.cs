@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Security;
+using System.Security.Cryptography.X509Certificates;
 
 namespace loops
 {
@@ -11,24 +12,42 @@ namespace loops
         public static void Main(string[] args)
         {
 
-            Console.WriteLine("Give me the first number");
-            int firstnumber = int.Parse(Console.ReadLine());
+            // Write a program that reads a number from the standard input, then draws a
+            // pyramid like this:
+            //
+            //
+            //    *
+            //   ***
+            //  *****
+            // *******
+            //
+            // The pyramid should have as many lines as the number was
 
-            Console.WriteLine("and the second number");
-            int secondnumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter a number");
+            int number = int.Parse(Console.ReadLine());
+            string sign = "*";
+            string space = " ";
+            Drawpyramid(number, sign, space);
+            Console.WriteLine();
+        }
 
-            if (secondnumber < firstnumber)
+        public static void Drawpyramid(int number, string sign, string space)
+        {
+            for (int i = 1; i <= number; i++)
             {
-                Console.WriteLine("The second number should be bigger");
-            }
-            else
-            {
-                for (int i = firstnumber; i <= secondnumber; i++)
+               
+                for (int j = 1; j < number-i+1; j++)
                 {
-                    Console.WriteLine(firstnumber++);
+                    Console.Write(space);
                 }
-
+                for (int k = 1; k <= i; k++)
+                {
+                    Console.Write(sign);
+                    Console.Write(space);
+                }
+                Console.WriteLine();
             }
         }
+
     }
 }
