@@ -27,11 +27,16 @@ namespace strings2
 
             Console.WriteLine("add first operand");
             int number1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("operation (suppoerted are: +, -, /, *");
+            Console.WriteLine("operation (suppoerted are: +, -, /, *, %");
             string operation = (Console.ReadLine());
             Console.WriteLine("second operand");
             int number2 = int.Parse(Console.ReadLine());
+            Calculator(number1, operation, number2);
 
+        }
+
+        public static void Calculator (int number1, string operation, int number2)
+        {
             if (operation == "+")
             {
                 Console.WriteLine(number1 += number2);
@@ -48,12 +53,15 @@ namespace strings2
             {
                 Console.WriteLine(number1 *= number2);
             }
+            else if (operation == "%")
+            {
+                Console.WriteLine(number1 %= number2);
+            }
             else
             {
                 Console.WriteLine("that operation is not supported");
             }
-
-
+            return;
         }
     }
 }
