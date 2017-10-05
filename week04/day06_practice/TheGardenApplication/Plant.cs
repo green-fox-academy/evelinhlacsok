@@ -1,45 +1,63 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace TheGardenApplication
 {
     public class Plant
     {
         protected string color;
-        protected static string[] colors = new string[]{"yellow", "blue", "purple", "orange"};
-        public bool needsWater;
-        public double waterNeed;
-        public double waterAmount;
+        // protected static string[] colors = new string[]{"yellow", "blue", "purple", "orange"};
+        protected double currentWaterAmount;
+        protected double waterNeed;
+        protected string type;
 
-        public void WateringAmount(double water)
+        public double WaterNeed
         {
-            waterAmount += waterNeed * water;
-        }
-
-        public void PlantInfo()
-        {
-            if (needsWater)
+            get
             {
-                Console.WriteLine("needs some water");
-            }
-            else
-            {
-                Console.WriteLine("needs no water");
-            }
-
-            if (waterNeed == 0.75)
-            {
-                Flowers
+                return waterNeed;
             }
         }
 
-        public void WaterNeed()
+        public string Type
         {
-            if (waterNeed == 0)
+            get
             {
-                Console.WriteLine("needs no more water");
-                return;
+                return type;
             }
-            waterAmount++;
         }
+
+        public string Color
+        {
+            get
+            {
+                return color;
+            }
+            set
+            {
+                color = value;
+            }
+        }
+
+        public double CurrentWaterAmount
+        {
+            get
+            {
+                return currentWaterAmount;
+            }
+            set
+            {
+                currentWaterAmount = value;
+            }
+        }
+
+        public virtual void Water(double waterAmount)
+        {
+            currentWaterAmount += waterAmount;
+        }
+        
     }
 }

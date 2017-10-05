@@ -1,17 +1,23 @@
 ﻿using System;
-using System.Globalization;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace TheGardenApplication
 {
     public class Flowers : Plant
     {
-        public Flowers()
+        public Flowers(string color)
         {
-            string flower1;
-            string flower2;
-            
-            base.color = colors[0];
-            waterNeed = 0.75;
+            this.waterNeed = 5;
+           // this.type = "Flower";
+            this.color = color;
+        }
+
+        public override void Water(double WaterAmount)
+        {
+            currentWaterAmount += WaterAmount * 0.75;
         }
     }
 }

@@ -4,7 +4,7 @@ namespace GreenFoxOrganization
 {
     public class Student : Person
     {
-        private string previousOrganization;
+        private readonly string previousOrganization;
         private int skippedDays;
         
         public Student(string name = "Jane Doe", int age = 30, string gender = "female", string previousOrganization = 
