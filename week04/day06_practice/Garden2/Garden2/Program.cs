@@ -21,9 +21,12 @@ namespace Garden2
             myGarden.Add(tree2);
 
             myGarden.ThirstyChecker();
+            Console.WriteLine();
             
             myGarden.Watering(40);
             myGarden.ThirstyChecker();
+            Console.WriteLine();
+
             myGarden.Watering(70);
             myGarden.ThirstyChecker();
 
