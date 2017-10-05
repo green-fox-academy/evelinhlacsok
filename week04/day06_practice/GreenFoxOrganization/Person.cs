@@ -13,17 +13,15 @@ namespace GreenFoxOrganization
             this.name = name;
             this.age = age;
             this.gender = gender;
-
         }
         public Person()
         {
             name = "Jane";
-            this.age = age;
-            this.gender = gender;
-
+            age = 30;
+            gender = "female";
         }
 
-        public virtual void Introduction()
+        public virtual void Introduce()
         {
             Console.WriteLine("Hi, I'm {0}, a {1} year old {2}.", name, age, gender); 
         }

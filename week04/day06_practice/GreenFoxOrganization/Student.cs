@@ -26,7 +26,7 @@ namespace GreenFoxOrganization
             skippedDays = 0;
         }
         
-        public override void Introduction()
+        public override void Introduce()
         {
             Console.WriteLine("Hi, I'm {0}, a {1} year old {2} from {3} who " +
                               "skipped {4} from the course already.", name, age, gender, previousOrganization,
