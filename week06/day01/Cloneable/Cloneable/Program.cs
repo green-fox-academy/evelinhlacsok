@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace GreenFoxOrganization
+namespace Cloneable
 {
-    internal class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
             List<Person> people = new List<Person>();
 
@@ -19,35 +22,33 @@ namespace GreenFoxOrganization
             people.Add(student);
             Mentor gandhi = new Mentor("Gandhi", 148, "male", "senior");
             people.Add(gandhi);
-            Mentor mrhelper = new Mentor("MrHelper", 148, "male", "senior");
-            people.Add(mrhelper);
             Mentor mentor = new Mentor();
             people.Add(mentor);
+            Mentor mrhelp = new Mentor("mrHelp", 32, "male", "senior");
+            people.Add(mrhelp);
+            Mentor mrhelp2 = new Mentor("mrHelp", 32, "male", "senior");
+            people.Add(mrhelp2);
             Sponsor sponsor = new Sponsor();
             people.Add(sponsor);
             Sponsor elon = new Sponsor("Elon Musk", 46, "male", "SpaceX");
             people.Add(elon);
+            Sponsor steve = new Sponsor("steve smith", 56, "male", "verydogfriendlyCompany");
+            people.Add(steve);
+            Student johnTheClone = (Student)john.Clone();
+            people.Add(johnTheClone);
+            
 
-            student.SkipDays(3);
-
-            for (int i = 0; i < 5; i++) {
-                elon.Hire();
-            }
-            for (int i = 0; i < 3; i++) {
-                sponsor.Hire();
-            }
-
-            foreach (Person person in people) {
+            foreach  (Person person in people)
+            {
                 person.Introduce();
                 person.GetGoal();
             }
+            PallidaClass alpaga = new PallidaClass("ALPAGA");
+            alpaga.AddStudent(new Student("bela", 29, "male", "sol")); //counts students and mentors now
+            alpaga.AddMentor(new Mentor("elon", 49, "female", "harvard"));
 
-            PallidaClass badass = new PallidaClass("BADA55");
-            badass.AddStudent(student);
-            badass.AddStudent(john);
-            badass.AddMentor(mentor);
-            badass.AddMentor(gandhi);
-            badass.Info();
+            alpaga.Info();
+
             Console.ReadLine();
         }
     }

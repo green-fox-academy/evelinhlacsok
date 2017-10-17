@@ -19,13 +19,30 @@ namespace Garden2
         {
             foreach (var plant in plants)
             {
-                Console.WriteLine("The {0} {1} {2}", plant.color, plant.type, plant.IsThirsty());
+                string thirsty = "";
+                if (plant.IsThirsty())
+                {
+                    thirsty = "needs water";
+                }
+                else
+                {
+                    thirsty = "does not need water";
+                }
+                Console.WriteLine("The {0} {1} {2}", plant.color, plant.type, thirsty);
             }
         }
 
         public void Watering(double waterPortion)
         {
             Console.WriteLine("Watering with " + waterPortion);
+            int counter = 0;
+            foreach (Plant plant in plants)
+            {
+                if (plant.IsThirsty())
+                {
+                    counter++;
+                }
+            }
             double waterPerPlant = waterPortion / plants.Count;
             foreach (var plant in plants)
             {

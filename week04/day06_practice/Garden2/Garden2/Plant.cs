@@ -14,16 +14,9 @@ namespace Garden2
         public string type;
         public double waterAmount;
 
-        public string IsThirsty()
+        public bool IsThirsty()
         {
-            if (waterAmount < waterNeed)
-            {
-                return "need water";
-            }
-            else
-            {
-                return "does not need water";
-            }
+            return waterAmount < waterNeed;
         }
 
     }
