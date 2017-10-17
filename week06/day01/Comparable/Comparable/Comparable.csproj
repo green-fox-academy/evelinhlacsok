@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0D8A2D61-2302-4C91-A9AC-2DA8FD53AE3F}</ProjectGuid>
+    <ProjectGuid>{F9103512-194A-40F1-B6D4-1195550FB89B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>pract</RootNamespace>
-    <AssemblyName>pract</AssemblyName>
+    <RootNamespace>Comparable</RootNamespace>
+    <AssemblyName>Comparable</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domino.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
