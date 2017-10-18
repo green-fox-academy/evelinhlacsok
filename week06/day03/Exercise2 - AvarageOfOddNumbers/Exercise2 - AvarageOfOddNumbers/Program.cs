@@ -14,11 +14,14 @@ namespace Exercise2___AvarageOfOddNumbers
 
             int[] n = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
 
-            IEnumerable<int> oddNumbers = from odds in n
+            IEnumerable<int> oddNumbersWithQuery = from odds in n
                                           where odds % 2 == 1
                                           select odds;
 
-            Console.WriteLine(oddNumbers.Average());
+            Console.WriteLine(oddNumbersWithQuery.Average());
+
+            IEnumerable<int> oddNumbersWithLambda = n.Where(y => y % 2 == 1);
+            Console.WriteLine(oddNumbersWithLambda.Average());
             Console.ReadLine();
         }
     }
