@@ -22,6 +22,15 @@ namespace Exercise_3___SquaredValueOfPositives
             {
             Console.WriteLine(number);
             }
+
+            Console.WriteLine();
+
+            IEnumerable<int> squareWithLambda = n.Where(y => y > 0).Select(y => y * y);
+
+            foreach (var squares in squareWithLambda)
+            {
+            Console.WriteLine(squares);
+            }
             Console.ReadLine();
         }
     }
