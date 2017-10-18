@@ -28,6 +28,16 @@ namespace Exercise6___FrequencyOfCharacters
             {
                 Console.WriteLine(character);
             }
+
+            Console.WriteLine();
+
+            var frequencyWithLambda = characters.OrderBy(y => y).GroupBy(y => y).Select(y => y.Count());
+
+            foreach (var character in frequencyWithLambda)
+            {
+                Console.WriteLine(character);
+            }
+
             Console.ReadLine();
         }
     }
