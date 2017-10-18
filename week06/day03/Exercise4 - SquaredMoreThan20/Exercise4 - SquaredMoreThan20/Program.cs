@@ -22,6 +22,14 @@ namespace Exercise4___SquaredMoreThan20
             {
                 Console.WriteLine(number);
             }
+
+            Console.WriteLine();
+
+            IEnumerable<int> squaredMoreThan20WithLambda = n.Where(y => y * y > 20);
+            foreach (var number in squaredMoreThan20WithLambda)
+            {
+                Console.WriteLine(number);
+            }
             Console.ReadLine();
         }
     }
