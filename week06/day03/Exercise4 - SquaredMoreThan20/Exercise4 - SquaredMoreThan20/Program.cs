@@ -10,6 +10,19 @@ namespace Exercise4___SquaredMoreThan20
     {
         static void Main(string[] args)
         {
+            //Write a LINQ Expression to find which number squared value is more then 20 from the following array:
+
+            int[] n = new[] { 3, 9, 2, 8, 6, 5 };
+
+            IEnumerable<int> squaredMoreThan20WithQuery = from square in n
+                                                          where square * square > 20
+                                                          select square;
+
+            foreach (var number in squaredMoreThan20WithQuery)
+            {
+                Console.WriteLine(number);
+            }
+            Console.ReadLine();
         }
     }
 }
