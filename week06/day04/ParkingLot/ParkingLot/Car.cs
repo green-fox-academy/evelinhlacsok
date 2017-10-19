@@ -18,7 +18,8 @@ namespace ParkingLot
     {
         Black,
         Red,
-        Blue
+        Blue,
+        Gold
     }
 
     class Car
