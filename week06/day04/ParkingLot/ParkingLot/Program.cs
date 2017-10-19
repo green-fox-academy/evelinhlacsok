@@ -45,6 +45,8 @@ namespace ParkingLot
             FindSameColorCars(carList);
             Console.WriteLine();
             FindSameTypeCarsWLambda(carList);
+            Console.WriteLine();
+            MostFrequentVehicle(carList);
             Console.ReadLine();
         }
 
@@ -88,6 +90,23 @@ namespace ParkingLot
             {
                 Console.WriteLine("Car number in type: \n" + car);
             }
+        }
+
+        private static void MostFrequentVehicle(List<Car> carList)
+        {
+            //var mostFrequentCar = (from freq in carList
+            //                    group freq by new { freq.Color, freq.Type } into mostOccouring
+            //                    orderby mostOccouring ascending
+            //                    select new { mostOccouring.Key, Count = (from freq in mostOccouring select freq).Count() });
+
+
+            var mostFrequentCar = carList
+                .GroupBy(car => new { Color = car.Color, Type = car.Type })
+                .ToDictionary(item => item.Key, item => item.Count())
+                .OrderByDescending(item => item.Value)
+                .First();
+            Console.WriteLine($"The most frequent type and color car is: { mostFrequentCar.Key.Color} { mostFrequentCar.Key.Type}");
+
         }
     }
 }
