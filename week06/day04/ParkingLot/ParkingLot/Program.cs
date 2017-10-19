@@ -39,6 +39,8 @@ namespace ParkingLot
             }
             Console.WriteLine();
             FindSameTypeCars(carList);
+            Console.WriteLine();
+            FindSameColorCars(carList);
             Console.ReadLine();
         }
 
@@ -62,7 +64,16 @@ namespace ParkingLot
            
             Console.WriteLine("Number of Honda: {0}, number of Toyota: {1}, number of Volvo: {2}, number of Audi: {3}",
                     sameTypeHonda.Count(), sameTypeToyota.Count(), sameTypeVolvo.Count(), sameTypeAudi.Count());
-            
+        }
+
+        private static void FindSameColorCars(List<Car> carList)
+        {
+            var sameColor = carList.GroupBy(x => x.Color).ToDictionary(x => x.Key, x => x.Count());
+
+            foreach (var car in sameColor)
+            {
+                Console.WriteLine("Car number in color: \n" + car);
+            }
         }
     }
 }
