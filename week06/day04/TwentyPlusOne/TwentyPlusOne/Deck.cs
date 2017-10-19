@@ -8,6 +8,12 @@ namespace TwentyPlusOne
 {
     class Deck
     {
+        Random random = new Random();
         List<Card> cardPack = new List<Card>();
+        
+        public Deck()
+        {
+            cardPack.Add
+        }
     }
 }
