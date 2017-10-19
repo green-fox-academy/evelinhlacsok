@@ -33,6 +33,8 @@ namespace ParkingLot
                  carList.Add(new Car((Type)random.Next(randomTypeMax), (Color)random.Next(randomColorMax)));
             }
 
+            Console.WriteLine("List of cars: ");
+
             foreach (var car in carList)
             {
                  Console.WriteLine(car.Type.ToString() + " "+ car.Color.ToString());
@@ -41,6 +43,8 @@ namespace ParkingLot
             FindSameTypeCars(carList);
             Console.WriteLine();
             FindSameColorCars(carList);
+            Console.WriteLine();
+            FindSameTypeCarsWLambda(carList);
             Console.ReadLine();
         }
 
@@ -73,6 +77,16 @@ namespace ParkingLot
             foreach (var car in sameColor)
             {
                 Console.WriteLine("Car number in color: \n" + car);
+            }
+        }
+
+        private static void FindSameTypeCarsWLambda(List<Car> carList)
+        {
+            var sameType = carList.GroupBy(x => x.Type).ToDictionary(x => x.Key, x => x.Count());
+
+            foreach (var car in sameType)
+            {
+                Console.WriteLine("Car number in type: \n" + car);
             }
         }
     }
