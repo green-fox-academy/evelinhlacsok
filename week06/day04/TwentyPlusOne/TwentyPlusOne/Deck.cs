@@ -15,32 +15,32 @@ namespace TwentyPlusOne
         int randomSuitMax = Enum.GetValues(typeof(Suit)).Length;
         int randomRankMax = Enum.GetValues(typeof(Rank)).Length;
 
-        int totalCardNumber = 104;
+        int totalCardNumber = 52;
 
-        public void ShuffleIt()
-        {
-            for (int i = 1; i <= totalCardNumber; i++)
-            {
-                cardPack.Add(new Card((Color)random.Next(randomColorMax), (Suit)random.Next(randomSuitMax), (Rank)random.Next(randomRankMax)));
-            }
-
-            Console.WriteLine("list of cards: ");
-            Console.ReadLine();
-        }
-    
-
-        //public List<Card> CreateCardList ()
+        //public void ShuffleIt()
         //{
-        //    for (int color = 1; color <= 2; color++)
+        //    for (int i = 1; i <= totalCardNumber; i++)
         //    {
-        //        for (int suit = 1; suit <= 4; suit++)
-        //        {
-        //            for (int rank = 1; rank <= 13; rank++)
-        //            {
-        //                cardPack.Add(new Card((Card.
-        //            }
-        //        }
+        //        cardPack.Add(new Card((Color)random.Next(randomColorMax), (Suit)random.Next(randomSuitMax), (Rank)random.Next(randomRankMax)));
         //    }
+
+        //    Console.WriteLine("list of cards: ");
         //}
+
+
+        public List<Card> CreateCardList()
+        {
+            for (int color = 1; color <= 2; color++)
+            {
+                for (int suit = 1; suit <= 4; suit++)
+                {
+                    for (int rank = 1; rank <= 13; rank++)
+                    {
+                        cardPack.Add(new Card((Card.
+                    }
+                }
+            }
+            return cardPack;
+        }
     }
 }

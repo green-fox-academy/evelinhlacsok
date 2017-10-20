@@ -28,8 +28,6 @@ namespace ParkingLot
 
             for (int i = 1; i <= carNumber; i++)
             {
-                // int randomTypeCar = random.Next(randomTypeMax);
-                // int randomColorCar = random.Next(randomColorMax);
                  carList.Add(new Car((Type)random.Next(randomTypeMax), (Color)random.Next(randomColorMax)));
             }
 
@@ -53,7 +51,7 @@ namespace ParkingLot
             FindSameColorCarsWQuery(carList);
             Console.WriteLine();
 
-            MostFrequentVehicle(carList);
+            MostFrequentVehicleQuery(carList);
             Console.WriteLine();
             MostFrequentVehicleLambda(carList);
             Console.ReadLine();
@@ -62,20 +60,20 @@ namespace ParkingLot
         private static void FindSameTypeCars(List<Car> carList)
         {
             var sameTypeHonda = from honda in carList
-                                      where honda.Type == Type.Honda
-                                      select honda;
+                                where honda.Type == Type.Honda
+                                select honda;
 
             var sameTypeToyota = from toyota in carList
-                                       where toyota.Type == Type.Toyota
-                                       select toyota;
+                                 where toyota.Type == Type.Toyota
+                                 select toyota;
 
             var sameTypeVolvo = from volvo in carList
-                                      where volvo.Type == Type.Volvo
-                                      select volvo;
+                                where volvo.Type == Type.Volvo
+                                select volvo;
 
             var sameTypeAudi = from audi in carList
-                                     where audi.Type == Type.Audi
-                                     select audi;
+                               where audi.Type == Type.Audi
+                               select audi;
            
             Console.WriteLine("Number of Honda: {0}, number of Toyota: {1}, number of Volvo: {2}, number of Audi: {3}",
                     sameTypeHonda.Count(), sameTypeToyota.Count(), sameTypeVolvo.Count(), sameTypeAudi.Count());
@@ -125,8 +123,7 @@ namespace ParkingLot
             }
         }
 
-
-        private static void MostFrequentVehicle(List<Car> carList)
+        private static void MostFrequentVehicleQuery(List<Car> carList)
         {
             var mostFrequent = (from freq in carList
                                 group freq by new { freq.Color, freq.Type } into mostOccouring
