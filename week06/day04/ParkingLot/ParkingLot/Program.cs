@@ -113,8 +113,12 @@ namespace ParkingLot
                 .GroupBy(car => new { Color = car.Color, Type = car.Type })
                 .ToDictionary(item => item.Key, item => item.Count())
                 .OrderByDescending(item => item.Value)
-                .First();
-            Console.WriteLine($"The most frequent type and color car is: { mostFrequentCar.Key.Color} { mostFrequentCar.Key.Type}");
+                .Take(1);
+
+            foreach (var car in mostFrequentCar)
+            {
+                Console.WriteLine("The most frequent type and color car is: " + car);
+            }
         }
     }
 }
