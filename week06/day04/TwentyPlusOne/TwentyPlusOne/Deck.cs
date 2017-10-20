@@ -17,26 +17,15 @@ namespace TwentyPlusOne
 
         int totalCardNumber = 52;
 
-        //public void ShuffleIt()
-        //{
-        //    for (int i = 1; i <= totalCardNumber; i++)
-        //    {
-        //        cardPack.Add(new Card((Color)random.Next(randomColorMax), (Suit)random.Next(randomSuitMax), (Rank)random.Next(randomRankMax)));
-        //    }
-
-        //    Console.WriteLine("list of cards: ");
-        //}
-
-
         public List<Card> CreateCardList()
         {
-            for (int color = 1; color <= 2; color++)
+            for (int color = 0; color < 2; color++)
             {
-                for (int suit = 1; suit <= 4; suit++)
+                for (int suit = 0; suit < 4; suit++)
                 {
-                    for (int rank = 1; rank <= 13; rank++)
+                    for (int rank = 0; rank < 13; rank++)
                     {
-                        cardPack.Add(new Card((Card.
+                        cardPack.Add(new Card((Color)color, (Suit)suit, (Rank)rank));
                     }
                 }
             }

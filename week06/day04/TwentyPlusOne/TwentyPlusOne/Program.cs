@@ -25,7 +25,14 @@ namespace TwentyPlusOne
             // The game is lost, if the sum of the pulled cards are above 21 or below the random number
 
             Deck deck = new Deck();
-            deck
+           
+            var cardPack = deck.CreateCardList();
+            foreach (var card in cardPack )
+            {
+                Console.WriteLine("{0} {1} {2}", card.Color, card.Suit, card.Rank);
+            }
+
+            Console.ReadLine();
         }
     }
 }
