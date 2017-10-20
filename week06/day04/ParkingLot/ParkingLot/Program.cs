@@ -40,12 +40,19 @@ namespace ParkingLot
                  Console.WriteLine(car.Type.ToString() + " "+ car.Color.ToString());
             }
             Console.WriteLine();
+
             FindSameTypeCars(carList);
-            Console.WriteLine();
-            FindSameColorCars(carList);
             Console.WriteLine();
             FindSameTypeCarsWLambda(carList);
             Console.WriteLine();
+            FindSameTypeCarsWQuery(carList);
+            Console.WriteLine();
+
+            FindSameColorCarsWLambda(carList);
+            Console.WriteLine();
+            FindSameColorCarsWQuery(carList);
+            Console.WriteLine();
+
             MostFrequentVehicle(carList);
             Console.WriteLine();
             MostFrequentVehicleLambda(carList);
@@ -74,16 +81,6 @@ namespace ParkingLot
                     sameTypeHonda.Count(), sameTypeToyota.Count(), sameTypeVolvo.Count(), sameTypeAudi.Count());
         }
 
-        private static void FindSameColorCars(List<Car> carList)
-        {
-            var sameColor = carList.GroupBy(x => x.Color).ToDictionary(x => x.Key, x => x.Count());
-
-            foreach (var car in sameColor)
-            {
-                Console.WriteLine("Car number in color: \n" + car);
-            }
-        }
-
         private static void FindSameTypeCarsWLambda(List<Car> carList)
         {
             var sameType = carList.GroupBy(x => x.Type).ToDictionary(x => x.Key, x => x.Count());
@@ -93,6 +90,41 @@ namespace ParkingLot
                 Console.WriteLine("Car number in type: \n" + car);
             }
         }
+
+        private static void FindSameTypeCarsWQuery(List<Car> carList)
+        {
+            var sameTypeWQuery = from car in carList
+                                 group car by new { car.Type } into sameType
+                                 select new { sameType.Key, Count = (from car in sameType select car).Count() };
+
+            foreach (var car in sameTypeWQuery)
+            {
+                Console.WriteLine("Car number in type: \n" + car);
+            }
+        }
+
+        private static void FindSameColorCarsWLambda(List<Car> carList)
+        {
+            var sameColor = carList.GroupBy(x => x.Color).ToDictionary(x => x.Key, x => x.Count());
+
+            foreach (var car in sameColor)
+            {
+                Console.WriteLine("Car number in color: \n" + car);
+            }
+        }
+
+        private static void FindSameColorCarsWQuery(List<Car> carList)
+        {
+            var sameColorWQuery = from car in carList
+                                  group car by new { car.Color } into sameColor
+                                  select new { sameColor.Key, Count = (from car in sameColor select car).Count() };
+
+            foreach (var car in sameColorWQuery)
+            {
+                Console.WriteLine("Car number in color: with query \n" + car);
+            }
+        }
+
 
         private static void MostFrequentVehicle(List<Car> carList)
         {
