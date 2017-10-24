@@ -11,5 +11,9 @@ namespace workshop.Models
             Id = id;
             Content = content;
         }
+
+        public Greeting()
+        {
+        }
     }
 }
