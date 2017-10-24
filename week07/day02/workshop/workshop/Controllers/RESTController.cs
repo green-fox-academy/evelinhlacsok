@@ -12,16 +12,18 @@ namespace workshop.Controllers
     [Route("api")]
     public class RESTController : Controller
     {
+        public static int counter = 0;
         // GET: /<controller>/
         public IActionResult Index()
         {
             return View();
         }
 
-        [Route("greeting")]
-        public IActionResult Greeting()
+        [Route("greeting/{name}")]
+        public IActionResult Greeting(string name)
         {
-            return new JsonResult(new Greeting(1, "evi"));
+            counter++;
+            return new JsonResult(new Greeting(counter, "hello " + name));
         }
     }
 }
