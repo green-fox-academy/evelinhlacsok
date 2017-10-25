@@ -5,6 +5,8 @@ namespace BankOfSimba.Models
     {
         Lion,
         Tiger,
-        Zebra
+        Zebra,
+        Bird,
+        Monkey
     }
 }

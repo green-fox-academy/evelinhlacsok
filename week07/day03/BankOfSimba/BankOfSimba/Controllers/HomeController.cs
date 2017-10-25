@@ -22,5 +22,16 @@ namespace BankOfSimba.Controllers
 
             return View(bankAccount);
         }
+        [Route("Accounts")]
+        public IActionResult ListOfBankAccounts()
+        {
+            List<BankAccount> BankAccounts = new List<BankAccount>();
+            BankAccounts.Add(new BankAccount("Nala", 1000, AnimalType.Tiger));
+            BankAccounts.Add(new BankAccount("Zazu", 500, AnimalType.Bird));
+            BankAccounts.Add(new BankAccount("Zordon", 4000, AnimalType.Tiger));
+            BankAccounts.Add(new BankAccount("Rafiki", 3000, AnimalType.Monkey));
+
+            return View(BankAccounts);
+        }
     }
 }
