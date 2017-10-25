@@ -4,7 +4,7 @@ namespace BankOfSimba.Models
     public class BankAccount
     {
         public string Name { get; set; }
-        public string Balance { get; set; }
+        public decimal Balance { get; set; }
         public AnimalType AnimalType { get; set; }
         public bool IsKing { get; set; }
 
@@ -12,10 +12,10 @@ namespace BankOfSimba.Models
         {
 
         }
-        public BankAccount(string name, string balance, AnimalType animalType, bool isKing)
+        public BankAccount(string name, decimal balance, AnimalType animalType, bool isKing)
         {
             Name = name;
-            Balance = balance + "0.00" + " Zebra";
+            Balance = balance;
             AnimalType = AnimalType;
             IsKing = isKing;
         }
