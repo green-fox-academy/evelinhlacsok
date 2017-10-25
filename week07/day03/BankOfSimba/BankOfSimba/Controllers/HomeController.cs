@@ -24,8 +24,8 @@ namespace BankOfSimba.Controllers
         {
             List<BankAccount> bankAccounts = new List<BankAccount>();
             bankAccounts.Add(new BankAccount("Nala", 1000, AnimalType.Tiger, true, true));
-            bankAccounts.Add(new BankAccount("Zazu", 500, AnimalType.Bird, false, true));
-            bankAccounts.Add(new BankAccount("Zordon", 4000, AnimalType.Tiger, true, false));
+            bankAccounts.Add(new BankAccount("Zazu", 500, AnimalType.Bird, true, true));
+            bankAccounts.Add(new BankAccount("Zordon", 4000, AnimalType.Tiger, false, false));
             bankAccounts.Add(new BankAccount("Rafiki", 3000, AnimalType.Monkey, false, false));
             bankAccounts.Add(new BankAccount("Mufasa", 8000, AnimalType.Tiger, true, true));
 
