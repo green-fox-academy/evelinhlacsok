@@ -15,10 +15,7 @@ namespace BankOfSimba.Controllers
         [Route("Simba")]
         public IActionResult Index()
         {
-            BankAccount bankAccount = new BankAccount();
-            bankAccount.Name = "Simba";
-            bankAccount.Balance = 2000;
-            bankAccount.AnimalType = AnimalType.Lion;
+            BankAccount bankAccount = new BankAccount("Simba", 2000, AnimalType.Lion, true, true);
 
             return View(bankAccount);
         }
