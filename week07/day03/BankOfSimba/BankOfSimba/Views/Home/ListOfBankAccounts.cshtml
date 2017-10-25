@@ -7,12 +7,13 @@
 <body>
     <div>
         <table border="1" cellpadding="15" style="text-align:center">
-            <tr style="font-weight: bold">
+            <tr style="font-weight: bold; background-color:silver">
                 <td>Index</td>
                 <td>Name</td>
                 <td>Balance</td>
                 <td>Animal Type</td>
                 <td>King?</td>
+				<td>Good?</td>
             </tr>
                  @{ 
                      foreach (var bankacc in Model)
@@ -23,6 +24,7 @@
                              <td>@bankacc.Balance.ToString("n2") Zebra</td>
                              <td>@bankacc.AnimalType</td>
                              <td style="color:silver">@((bankacc.IsKing) ? "KING" : string.Empty)</td>
+					         <td style="color:silver">@((bankacc.IsGood) ? "Good Dog" : "Bad Guy")</td>
                          </tr>
                      }
                  }   
