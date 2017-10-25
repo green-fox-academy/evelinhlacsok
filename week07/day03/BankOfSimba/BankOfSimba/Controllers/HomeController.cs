@@ -17,7 +17,7 @@ namespace BankOfSimba.Controllers
         {
             BankAccount bankAccount = new BankAccount();
             bankAccount.Name = "Simba";
-            bankAccount.Balance = 2000;
+            bankAccount.Balance = "2000";
             bankAccount.AnimalType = AnimalType.Lion;
 
             return View(bankAccount);
@@ -26,10 +26,10 @@ namespace BankOfSimba.Controllers
         public IActionResult ListOfBankAccounts()
         {
             List<BankAccount> BankAccounts = new List<BankAccount>();
-            BankAccounts.Add(new BankAccount("Nala", 1000, AnimalType.Tiger));
-            BankAccounts.Add(new BankAccount("Zazu", 500, AnimalType.Bird));
-            BankAccounts.Add(new BankAccount("Zordon", 4000, AnimalType.Tiger));
-            BankAccounts.Add(new BankAccount("Rafiki", 3000, AnimalType.Monkey));
+            BankAccounts.Add(new BankAccount("Nala", "1000", AnimalType.Tiger));
+            BankAccounts.Add(new BankAccount("Zazu", "500", AnimalType.Bird));
+            BankAccounts.Add(new BankAccount("Zordon", "4000", AnimalType.Tiger));
+            BankAccounts.Add(new BankAccount("Rafiki", "3000", AnimalType.Monkey));
 
             return View(BankAccounts);
         }
