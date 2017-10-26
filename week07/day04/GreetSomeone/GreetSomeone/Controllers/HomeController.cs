@@ -11,18 +11,33 @@ namespace GreetSomeone.Controllers
 {
     public class HomeController : Controller
     {
+        Greet greet;
+
+        public HomeController(Greet greet)
+        {
+            this.greet = greet;
+        }
+
         [HttpGet]
-        [Route("index")]
+        [Route("submit")]
         public IActionResult Index()
         {
-            return View("Index");
+            return View();
         }
 
         [HttpPost]
-        [Route("index")]
-        public IActionResult Greet()
+        [Route("submit")]
+        public IActionResult Greet(string name)
         {
-            return View();
+            greet.Name = name;
+            return RedirectToAction("Greet");
+        }
+
+        [HttpGet]
+        [Route("greet")]
+        public IActionResult ShowData()
+        {
+            return View(greet);
         }
     }
 }
