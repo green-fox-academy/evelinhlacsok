@@ -3,9 +3,10 @@ namespace GreetSomeone.Models
 {
     public class Greet
     {
-        public string Greet
+        public string Name { get; set; }
         public Greet()
         {
+            Console.WriteLine("hello" + Name);
         }
     }
 }
