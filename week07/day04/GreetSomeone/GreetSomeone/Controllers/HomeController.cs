@@ -19,7 +19,7 @@ namespace GreetSomeone.Controllers
         }
 
         [HttpGet]
-        [Route("submit")]
+        [Route("")]
         public IActionResult Index()
         {
             return View();
@@ -30,12 +30,12 @@ namespace GreetSomeone.Controllers
         public IActionResult Greet(string name)
         {
             greet.Name = name;
-            return RedirectToAction("Greet");
+            return RedirectToAction("IndexWithName");
         }
 
         [HttpGet]
-        [Route("greet")]
-        public IActionResult ShowData()
+        [Route("submit")]
+        public IActionResult IndexWithName()
         {
             return View(greet);
         }
