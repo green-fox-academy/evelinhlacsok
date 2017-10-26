@@ -29,6 +29,7 @@ namespace DependencyInjectionWorkshop.Controllers
         [Route("index")]
         public IActionResult Count()
         {
+            counter.Raise();
             return RedirectToAction("Index");
         }
     }

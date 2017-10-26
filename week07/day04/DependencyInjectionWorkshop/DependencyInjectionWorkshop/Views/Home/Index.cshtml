@@ -5,6 +5,9 @@
 </head>
 <body>
     <p>@Model.Number</p>
-		<input type="submit" value="dog counter" />
+	@using (Html.BeginForm("action", "home"))
+		{
+        <input type="submit" value="dog counter" />
+        }
 </body>
 </html>
