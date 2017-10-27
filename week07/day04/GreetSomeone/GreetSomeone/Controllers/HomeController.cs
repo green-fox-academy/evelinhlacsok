@@ -27,9 +27,12 @@ namespace GreetSomeone.Controllers
 
         [HttpPost]
         [Route("submit")]
-        public IActionResult Greet(string name)
+        public IActionResult Greet(string firstname, string lastname, int id)
         {
-            greet.Name = name;
+            greet.FirstName = firstname;
+            greet.LastName = lastname;
+            greet.Id = id;
+           
             return RedirectToAction("IndexWithName");
         }
 
