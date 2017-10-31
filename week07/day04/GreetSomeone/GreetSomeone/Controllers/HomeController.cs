@@ -26,18 +26,18 @@ namespace GreetSomeone.Controllers
         }
 
         [HttpPost]
-        [Route("submit")]
-        public IActionResult Greet(string firstname, string lastname, int id)
+        [Route("greet")]
+        public IActionResult Greet(string firstname, string lastname, string birthday)
         {
             greet.FirstName = firstname;
             greet.LastName = lastname;
-            greet.Id = id;
+            greet.Birthday = birthday;
            
             return RedirectToAction("IndexWithName");
         }
 
         [HttpGet]
-        [Route("submit")]
+        [Route("greet")]
         public IActionResult IndexWithName()
         {
             return View(greet);
