@@ -10,11 +10,18 @@
     <Folder Include="Views\" />
     <Folder Include="Controllers\" />
     <Folder Include="Entities\" />
-    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Todo\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Controllers\HomeController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Entities\TodoContext.css" />
+  </ItemGroup>
 </Project>

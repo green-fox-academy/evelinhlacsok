@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using ListingTodos.Entities;
+using ListingTodos.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -28,8 +30,8 @@ namespace ListingTodos
             Configuration = builder.Build();
 
             services.AddMvc();
-            services.AddDbContext<StudentContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:StudentConnection"]));
-            services.AddScoped<StudentRepository>();
+            services.AddDbContext<TodoContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:TodoConnection"]));
+            services.AddScoped<TodoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,9 +45,9 @@ namespace ListingTodos
             app.UseMvc();
 
             app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+             {
+                 await context.Response.WriteAsync("Hello World!");
+             });
         }
     }
 }
