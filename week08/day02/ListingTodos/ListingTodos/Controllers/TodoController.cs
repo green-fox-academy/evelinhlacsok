@@ -35,10 +35,10 @@ namespace ListingTodos.Controllers
 
         [Route("/add")]
 		[HttpPost]
-        public IActionResult Add(string Title)
+        public IActionResult Add(string Title, bool IsUrgent)
         {
-            TodoRepository.AddTask(Title);
-            return RedirectToAction("list");
+            TodoRepository.AddTask(Title, IsUrgent);
+            return RedirectToAction("");
         }
     }
 }
