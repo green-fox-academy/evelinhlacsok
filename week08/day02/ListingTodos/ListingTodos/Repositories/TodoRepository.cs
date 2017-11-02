@@ -17,7 +17,9 @@ namespace ListingTodos.Repositories
 
         public void AddTask()
         {
-            
+            TodoContext.Todos.Add(new Todo() { Title = "feed the dog", IsUrgent = true, IsDone = false});
+            TodoContext.Todos.Add(new Todo() { Title = "eat", IsUrgent = true, IsDone = false });
+            TodoContext.SaveChanges();
         }
 
         public List<Todo> ListTasks()

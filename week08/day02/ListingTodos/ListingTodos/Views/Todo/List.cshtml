@@ -1,16 +1,27 @@
-﻿
-
+﻿@model System.Collections.Generic.List<ListingTodos.Models.Todo>
+ 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Todo</title>
 </head>
 <body>
     <h2>Todos for today</h2>
-		<ul>
-	<li>start the day</li>
-	<li>finish H2 workshop1</li>
-	<li>finish JPA workshop2</li>
-    <li>create a CRUD project</li>
-		</ul>
+
+		<table style="width:100%">
+  <tr>
+    <th>Id</th>
+    <th>Todo</th> 
+    <th>Is Urgent</th>
+    <th>Is Done</th>
+  </tr>
+
+
+</table>
+		@foreach (var item in @Model) 
+		{
+           <div>@item.Id @item.Title @item.IsUrgent @item.IsDone </div> 
+		}
+        
 </body>
 </html>
+       

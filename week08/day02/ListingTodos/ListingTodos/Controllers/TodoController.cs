@@ -24,7 +24,8 @@ namespace ListingTodos.Controllers
 		[Route("list")]
         public IActionResult List()
         {
-            return View();
+            //TodoRepository.AddTask();
+            return View(TodoRepository.ListTasks());
         }  
     }
 }
