@@ -59,9 +59,10 @@ namespace ListingTodos.Controllers
 
         [Route("/{id}/delete")]
         [HttpPost]
-        public IActionResult Delete()
+        public IActionResult Delete(int id)
         {
-            return View();
+            TodoRepository.Delete(id);
+            return RedirectToAction("list");
         }
     }
 }

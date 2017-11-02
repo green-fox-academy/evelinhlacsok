@@ -55,13 +55,18 @@
 					    </td>
 					
 				        <td>
-					<form action="/@task.Id/delete" method="post"><button type="submit" 
-					value="Edit">Delete</button></form></td>
+					 <form action="/(@task.Id)/delete" method="post">
+                        <input type="hidden" name="Id" value="@task.Id" />
+                        <button id="table" class="number" type="submit">Delete</button>
+                    </form></td>
                     </tr>
                 }
             }
         </tbody>
     </table>
+		<br />
+		<form action="/add" method="get"><button type="submit" 
+                        value="Add">Add new todo</button></form>
 </body>
 </html>
        
