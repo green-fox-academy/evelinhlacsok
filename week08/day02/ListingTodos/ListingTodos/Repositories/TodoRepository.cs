@@ -1,5 +1,8 @@
 ﻿using System;
 using ListingTodos.Entities;
+using System.Collections.Generic;
+using System.Linq;
+using ListingTodos.Models;
 
 namespace ListingTodos.Repositories
 {
@@ -11,5 +14,16 @@ namespace ListingTodos.Repositories
         {
             TodoContext = todoContext;
         }
+
+        public void AddTask()
+        {
+            
+        }
+
+        public List<Todo> ListTasks()
+        {
+            return TodoContext.Todos.ToList();
+        }
+
     }
 }

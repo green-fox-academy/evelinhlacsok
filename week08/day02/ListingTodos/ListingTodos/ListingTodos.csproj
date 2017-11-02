@@ -1,9 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <Folder Include="wwwroot\" />
     <Folder Include="Models\" />
@@ -13,20 +11,20 @@
     <Folder Include="Views\Todo\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.0" />
   </ItemGroup>
-
   <ItemGroup>
     <Compile Remove="Controllers\HomeController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Entities\TodoContext.css" />
   </ItemGroup>
-
   <ItemGroup>
-  <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
-</ItemGroup>
-
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.0.0" />
+  </ItemGroup>
 </Project>

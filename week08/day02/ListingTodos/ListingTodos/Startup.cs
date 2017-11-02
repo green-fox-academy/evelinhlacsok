@@ -16,21 +16,20 @@ namespace ListingTodos
 {
     public class Startup
     {
-        public static IConfigurationRoot Configuration { get; set; }
+      //  public static IConfigurationRoot Configuration { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-
-            var builder = new ConfigurationBuilder()
+           /* var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json");
 
-            Configuration = builder.Build();
+            Configuration = builder.Build();*/
 
             services.AddMvc();
-            services.AddDbContext<TodoContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:TodoConnection"]));
+            services.AddDbContext<TodoContext>(options => options.UseSqlite("Data Source=yourdatabase.db"));            
             services.AddScoped<TodoRepository>();
         }
 
