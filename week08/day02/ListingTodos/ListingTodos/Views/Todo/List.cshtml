@@ -36,6 +36,8 @@
                 <th>Title</th>
                 <th>Done</th>
                 <th>Urgent</th>
+				<th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -47,6 +49,14 @@
                         <td style="background-color:gold">@task.Title</td>
                         <td>@task.IsDone</td>
                         <td>@task.IsUrgent</td>
+				        <td>
+					<form action="/@task.Id/update" method="post"><button type="submit" 
+						value="Edit">Edit</button></form>
+					    </td>
+					
+				        <td>
+					<form action="/@task.Id/delete" method="post"><button type="submit" 
+					value="Edit">Delete</button></form></td>
                     </tr>
                 }
             }

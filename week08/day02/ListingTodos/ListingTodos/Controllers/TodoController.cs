@@ -40,5 +40,28 @@ namespace ListingTodos.Controllers
             TodoRepository.AddTask(Title, IsUrgent);
             return RedirectToAction("list");
         }
+
+        [Route("/{id}/update")]
+        [HttpPost]
+        public IActionResult Update(int id)
+        {
+            var todo = TodoRepository.Updating(id);
+            return View(todo);
+        }
+
+        [Route("/{id}/edit")]
+        [HttpPost]
+        public IActionResult Edit(ListingTodos.Models.Todo todo)
+        {
+            TodoRepository.UpdateTodo(todo);
+            return RedirectToAction("list");
+        }
+
+        [Route("/{id}/delete")]
+        [HttpPost]
+        public IActionResult Delete()
+        {
+            return View();
+        }
     }
 }

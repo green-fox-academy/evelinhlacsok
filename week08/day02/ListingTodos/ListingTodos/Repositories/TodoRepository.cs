@@ -17,7 +17,6 @@ namespace ListingTodos.Repositories
 
         public void AddTask(string todo, int isurgent)
         {
-            //   TodoContext.Todos.Add(new Todo { Title = todo, IsUrgent = true, IsDone = false });
             var newTask = new Todo { Title = todo, IsUrgent = false, IsDone = false};
             if (isurgent == 1)
             {
@@ -31,6 +30,17 @@ namespace ListingTodos.Repositories
         public List<Todo> ListTasks()
         {
             return TodoContext.Todos.ToList();
+        }
+
+        public Todo Updating(int id)
+        {
+            return TodoContext.Todos.FirstOrDefault(x => x.Id == id);
+        }
+
+        public void UpdateTodo(Todo todo)
+        {
+            TodoContext.Todos.Update(todo);
+            TodoContext.SaveChanges();
         }
 
     }

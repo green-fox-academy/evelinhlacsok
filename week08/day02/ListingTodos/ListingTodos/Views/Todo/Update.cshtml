@@ -1,0 +1,19 @@
+﻿@model ListingTodos.Models.Todo
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Update task</title>
+
+</head>
+<body>
+   <form action="edit" method="post">
+            
+        <label style="color:gold; font-weight:bold">update task:</label>
+        <input style="color:silver; text-align:center" 
+               type="text" name="Title" value="@Model.Title"/> <br /> <br />
+              
+        <button style="color:gold" 
+                type="submit" value="Submit">Save</button></form>
+</body>
+</html>
+       
