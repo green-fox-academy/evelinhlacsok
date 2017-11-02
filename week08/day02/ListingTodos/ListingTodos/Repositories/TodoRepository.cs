@@ -15,10 +15,15 @@ namespace ListingTodos.Repositories
             TodoContext = todoContext;
         }
 
-        public void AddTask(string todo, bool isurgent)
+        public void AddTask(string todo, int isurgent)
         {
             //   TodoContext.Todos.Add(new Todo { Title = todo, IsUrgent = true, IsDone = false });
-            var newTask = new Todo { Title = todo, IsUrgent = isurgent};
+            var newTask = new Todo { Title = todo, IsUrgent = false, IsDone = false};
+            if (isurgent == 1)
+            {
+                newTask.IsUrgent = true;
+            }
+
             TodoContext.Todos.Add(newTask);
             TodoContext.SaveChanges();
         }
