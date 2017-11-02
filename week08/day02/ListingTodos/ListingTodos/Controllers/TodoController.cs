@@ -10,7 +10,7 @@ using ListingTodos.Repositories;
 
 namespace ListingTodos.Controllers
 {
-	[Route("todo")]
+	//[Route("todo")]
     public class TodoController : Controller
     {
         private TodoRepository TodoRepository;
@@ -24,8 +24,21 @@ namespace ListingTodos.Controllers
 		[Route("list")]
         public IActionResult List()
         {
-            //TodoRepository.AddTask();
             return View(TodoRepository.ListTasks());
         }  
+        [Route("/add")]
+		[HttpGet]
+        public IActionResult Add()
+        {
+            return View();
+        }
+
+        [Route("/add")]
+		[HttpPost]
+        public IActionResult Add(string Title)
+        {
+            TodoRepository.AddTask(Title);
+            return RedirectToAction("list");
+        }
     }
 }
