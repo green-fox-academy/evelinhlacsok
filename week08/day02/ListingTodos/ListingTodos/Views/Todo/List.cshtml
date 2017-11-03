@@ -1,34 +1,11 @@
 ﻿@model System.Collections.Generic.List<ListingTodos.Models.Todo>
- 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Todo App</title>
-    <style>
-        span, p {
-            font-weight: bold;
-        }
-
-        table {
-            font-family: Verdana;
-        }
-
-        th {
-			color: black;
-			background-color: gold;
-            border: 2px solid;
-            padding: 0px 1px 0px 1px;
-            font-weight: bold;
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        td {
-            padding:5px 3px 5px 3px;
-            border: 2px solid black;
-        }
-    </style>
+    <title>Todo CRUD App</title>
+    <link href="@Url.Content("~/css/Stylesheet.css")" rel="stylesheet" type="text/css" />
 </head>
 <body>
+		<h2>list of things to do</h2>
     <table>
         <thead>
             <tr>

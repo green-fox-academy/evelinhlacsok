@@ -42,6 +42,7 @@ namespace ListingTodos
             }
 
             app.UseMvc();
+            app.UseStaticFiles();
 
             app.Run(async (context) =>
              {
