@@ -6,11 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using ListingTodos.Models;
 using ListingTodos.Repositories;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace ListingTodos.Controllers
 {
-	//[Route("todo")]
     public class TodoController : Controller
     {
         private TodoRepository TodoRepository;
@@ -26,6 +23,7 @@ namespace ListingTodos.Controllers
         {
             return View(TodoRepository.ListTasks());
         }  
+
         [Route("/add")]
 		[HttpGet]
         public IActionResult Add()
