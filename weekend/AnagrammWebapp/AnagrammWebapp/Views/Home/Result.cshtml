@@ -5,8 +5,7 @@
     <title>Home</title>
 </head>
     <body>
-        <p style="color:pink; font-size:28px">  @Model.FirstWord @Model.SecondWord !</p>
-
-
+		    <h1>"@Model.FirstWord" and "@Model.SecondWord" are</h1>
+             <h2>@(Model.IsAnagram() ? "anagramms!" : "not anagramms")</h2>
     </body>
 </html>

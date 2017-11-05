@@ -26,5 +26,21 @@ namespace AnagrammWebapp.Controllers
         }
 
 
+        [HttpPost]
+        [Route("isAnagramm")]
+        public IActionResult isAnagramm(string firstword, string secondword)
+        {
+            anagrammcheck.FirstWord = firstword;
+            anagrammcheck.SecondWord = secondword;
+
+            return RedirectToAction("Result");
+        }
+
+        [HttpGet]
+        [Route("isAnagramm")]
+        public IActionResult Result()
+        {
+            return View(anagrammcheck);
+        }
     }
 }
