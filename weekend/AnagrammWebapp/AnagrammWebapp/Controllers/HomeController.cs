@@ -24,5 +24,7 @@ namespace AnagrammWebapp.Controllers
         {
             return View();
         }
+
+
     }
 }
