@@ -6,11 +6,16 @@
     {
     <input type="hidden" name="Id" value="@Model.Id" />
 	
-    <label style="color:silver; font-weight:bold">Task to do: </label>@Html.TextBoxFor(x => x.Title)<br/><br/>
-    <label style="color:silver; font-weight:bold">Is it urgent? </label>@Html.CheckBoxFor(x => x.IsUrgent)<br/><br/>
-    <label style="color:silver; font-weight:bold">Is it done? </label>@Html.CheckBoxFor(x => x.IsDone)<br/><br/>
+    <label style="color:silver">Task to do: </label>
+	@Html.TextBoxFor(x => x.Title)<br/><br/>
+	
+    <label style="color:silver">Is it urgent? </label>
+	@Html.CheckBoxFor(x => x.IsUrgent)<br/><br/>
+	
+    <label style="color:silver">Is it done? </label>
+	@Html.CheckBoxFor(x => x.IsDone)<br/><br/>
 
-    <form style="display:inline-block"><button style="color:gold" type="submit">Submit</button></form>
+    <form><button style="color:gold" type="submit">Submit</button></form>
 	}
-	<form style="display:inline-block" action="/list" method="get"><button style="color:gold" type="submit">Cancel</button></form>
+	<form action="/list" method="get"><button style="color:gold" type="submit">Cancel</button></form>
 </body>

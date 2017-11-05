@@ -21,7 +21,7 @@
             @{
                 foreach (var task in Model)
                 {
-                    <tr style="@((task.IsUrgent)? "background-color:silver": string.Empty)">
+                    <tr style="@((task.IsUrgent)? "background-color:silver": string.Empty)" >
                         <td>@task.Id</td>
                         <td style="background-color:gold">@task.Title</td>
                         <td>@task.IsDone</td>
