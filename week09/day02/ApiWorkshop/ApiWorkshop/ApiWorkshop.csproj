@@ -19,4 +19,7 @@
     <None Remove="wwwroot\stylesheet\EmptyCSSFile.css" />
     <None Remove="Views\Home\Index.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\Until.cs" />
+  </ItemGroup>
 </Project>
