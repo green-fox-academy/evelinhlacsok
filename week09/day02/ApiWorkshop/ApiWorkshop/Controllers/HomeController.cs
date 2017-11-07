@@ -85,5 +85,29 @@ namespace ApiWorkshop.Models
             }
                 return Json(new { error = "Please provide a number!" });
         }
+
+        [HttpPost]
+        [Route("array")]
+        public IActionResult ArrayHandler([FromBody] Pownie pownie)
+        {
+            if (pownie.Action == "Sum")
+            {
+                int result = pownie.Sum(pownie.Number);
+                return Json(new { result = result });
+            }
+
+            if (pownie.Action == "Multiply")
+            {
+                int result = pownie.Multiply(pownie.Number);
+                return Json(new { result = result });
+            }
+
+            if (pownie.Action == "Double")
+            {
+                int[] result = pownie.Double(pownie.Number);
+                return Json(new { result = result });
+            }
+            return Json(new { error = "Please provide what to do with the numbers!" });
+        }
     }
 }
