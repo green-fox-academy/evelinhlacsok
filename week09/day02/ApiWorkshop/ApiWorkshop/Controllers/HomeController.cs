@@ -9,21 +9,25 @@ using ApiWorkshop.Models;
 
 namespace ApiWorkshop.Models
 {
+    [Route("")]
     public class HomeController : Controller
     {
         
         [HttpGet]
-        [Route("")]
         public IActionResult Index()
         {
-            return View();
+            return File("index.html", "text/html");
         }
 
         [HttpGet]
-        [Route("/doubling/{input=15}")]
-        public IActionResult Doubling()
+        [Route("doubling")]
+        public IActionResult Doubling(int? input)
         {
-            return View();
+            if (input == null)
+            {
+                return Json(new { error = "Please provide an input!" });
+            }
+            return Json(new { received = input, result = input * 2 });
         }
     }
 }
