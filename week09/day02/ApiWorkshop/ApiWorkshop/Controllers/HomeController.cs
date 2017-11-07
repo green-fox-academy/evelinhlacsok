@@ -62,6 +62,7 @@ namespace ApiWorkshop.Models
 
         [HttpPost]
         [Route("dountil/{what}")]
+        [Route("dountil/")]
         public IActionResult DoUntil([FromBody] JsonObject jsonObject, string what)
         {
             if (what == "factor")
@@ -82,10 +83,7 @@ namespace ApiWorkshop.Models
                 }
                 return Json(new { result = sum });
             }
-            else
-            {
                 return Json(new { error = "Please provide a number!" });
-            }
         }
     }
 }
