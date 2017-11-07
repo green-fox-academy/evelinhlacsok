@@ -18,5 +18,12 @@ namespace ApiWorkshop.Models
         {
             return View();
         }
+
+        [HttpGet]
+        [Route("/doubling/{input=15}")]
+        public IActionResult Doubling()
+        {
+            return View();
+        }
     }
 }
