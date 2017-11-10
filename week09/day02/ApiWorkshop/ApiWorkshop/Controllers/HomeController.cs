@@ -14,9 +14,10 @@ namespace ApiWorkshop.Models
     {
 
         [HttpGet]
+		[Route("")]
         public IActionResult Index()
         {
-            return File("index.html", "text/html");
+            return File("Index.html", "text/html");
         }
 
         [HttpGet]

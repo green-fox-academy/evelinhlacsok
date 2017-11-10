@@ -5,7 +5,7 @@
     <link href="@Url.Content("~/css/Stylesheet.css")" rel="stylesheet" type="text/css" />
 </head>
 <body>
-		<h2>list of things to do</h2>
+        <h2>list of things to do</h2>
     <table>
         <thead>
             <tr>
@@ -13,7 +13,7 @@
                 <th>Title</th>
                 <th>Done</th>
                 <th>Urgent</th>
-				<th>Edit</th>
+                <th>Edit</th>
                 <th>Delete</th>
             </tr>
         </thead>
@@ -26,13 +26,13 @@
                         <td style="background-color:gold">@task.Title</td>
                         <td>@task.IsDone</td>
                         <td>@task.IsUrgent</td>
-				        <td>
-					<form action="/@task.Id/update" method="post"><button type="submit" 
-						value="Edit">Edit</button></form>
-					    </td>
-					
-				        <td>
-					 <form action="/(@task.Id)/delete" method="post">
+                        <td>
+                    <form action="/@task.Id/update" method="post"><button type="submit" 
+                        value="Edit">Edit</button></form>
+                        </td>
+                    
+                        <td>
+                     <form action="/(@task.Id)/delete" method="post">
                         <input type="hidden" name="Id" value="@task.Id" />
                         <button id="table" class="number" type="submit">Delete</button>
                     </form></td>
@@ -41,9 +41,8 @@
             }
         </tbody>
     </table>
-		<br />
-		<form action="/add" method="get"><button type="submit" 
+        <br />
+        <form action="/add" method="get"><button type="submit" 
                         value="Add">Add new todo</button></form>
 </body>
 </html>
-       

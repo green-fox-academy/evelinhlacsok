@@ -18,21 +18,21 @@ namespace ListingTodos.Controllers
         }
 
         [Route("")]
-		[Route("list")]
+        [Route("list")]
         public IActionResult List()
         {
             return View(TodoRepository.ListTasks());
-        }  
+        }
 
         [Route("/add")]
-		[HttpGet]
+        [HttpGet]
         public IActionResult Add()
         {
             return View();
         }
 
         [Route("/add")]
-		[HttpPost]
+        [HttpPost]
         public IActionResult Add(string Title, int IsUrgent)
         {
             TodoRepository.AddTask(Title, IsUrgent);
