@@ -8,6 +8,7 @@ using Reddit.Models;
 
 namespace Reddit.Controllers
 {
+    [Route("")]
     public class HomeController : Controller
     {
         private ContentRepository ContentRepository;
@@ -17,9 +18,11 @@ namespace Reddit.Controllers
             ContentRepository = contentRepository;
         }
 
+        [Route("")]
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            return View(ContentRepository.GetList());
         }
     }
 }
