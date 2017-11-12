@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.w3.org/1999/xhtml">
     <head>
+		<title>Reddit App</title>
     </head>
     <body>
 		<h3>Reddit</h3>
@@ -9,7 +10,7 @@
 			<tr>
 				<th>Score</th>
                 <th>Post</th>
-				<th>Voting</th>
+				<th>Action</th>
 			</tr>
 			@foreach (var item in @Model)
 			{
@@ -19,5 +20,7 @@
 			</tr>
 			}
 		</table>
+		 <form action="/add" method="get"><button type="submit" 
+                        value="Add">Add new post</button></form>
     </body>
 </html>
