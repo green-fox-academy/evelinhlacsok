@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Reddit.Entities;
+using Reddit.Repositories;
 
 namespace Reddit
 {
@@ -16,8 +19,8 @@ namespace Reddit
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<RedditContext>(options => options.UseSqlite("Data Source=redditdatabase.db")); 
-            services.AddScoped<RedditRepository>();
+            services.AddDbContext<ContentContext>(options => options.UseSqlite("Data Source=redditdatabase.db")); 
+            services.AddScoped<ContentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
