@@ -5,10 +5,19 @@
     </head>
     <body>
 		<h3>Reddit</h3>
-
-
-
-		
-
+		<table>
+			<tr>
+				<th>Score</th>
+                <th>Post</th>
+				<th>Voting</th>
+			</tr>
+			@foreach (var item in @Model)
+			{
+			<tr>
+				<th>@item.Votes</th>
+				<th>@item.Post</th>
+			</tr>
+			}
+		</table>
     </body>
 </html>
