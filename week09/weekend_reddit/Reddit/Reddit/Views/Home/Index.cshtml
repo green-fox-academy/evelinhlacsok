@@ -11,12 +11,23 @@
 				<th>Score</th>
                 <th>Post</th>
 				<th>Action</th>
+                <th>Delete</th>
 			</tr>
 			@foreach (var item in @Model)
 			{
 			<tr>
 				<th>@item.Votes</th>
 				<th>@item.Post</th>
+                <th>
+                    <a href="/vote/up/@item.Id" title="I like it" class="upvote">+</a>
+                    <a href="/vote/down/@item.Id" title="I hate it" class="downvote">&nbsp-&nbsp</a>
+                </th>
+                <th>
+                    <form action="/(@item.Id)/delete" method="post">
+                        <input type="hidden" name="Id" value="@item.Id" />
+                        <button id="table" class="number" type="submit">Delete</button>
+                    </form>
+                </th>
 			</tr>
 			}
 		</table>

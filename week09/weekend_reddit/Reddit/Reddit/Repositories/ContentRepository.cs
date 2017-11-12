@@ -28,5 +28,16 @@ namespace Reddit.Repositories
             contentContext.Contents.Add(content);
             contentContext.SaveChanges();
         }
+
+        public Content GetId(int id)
+        {
+            return contentContext.Contents.FirstOrDefault(x => x.Id == id);
+        }
+
+        public void DeletePost(int id)
+        {
+            contentContext.Contents.Remove(GetId(id));
+            contentContext.SaveChanges();
+        }
     }
 }
