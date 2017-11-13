@@ -48,5 +48,13 @@ namespace Reddit.Controllers
             ContentRepository.DeletePost(id);
             return RedirectToAction("index");
         }
+
+        [Route("/{id}/update")]
+        [HttpPost]
+        public IActionResult Update(int id)
+        {
+            var content = ContentRepository.GetId(id);
+            return View(content);
+        }
     }
 }

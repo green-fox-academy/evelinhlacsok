@@ -39,5 +39,11 @@ namespace Reddit.Repositories
             contentContext.Contents.Remove(GetId(id));
             contentContext.SaveChanges();
         }
+
+        public void Update(Content content)
+        {
+            contentContext.Contents.Update(content);
+            contentContext.SaveChanges();
+        }
     }
 }
