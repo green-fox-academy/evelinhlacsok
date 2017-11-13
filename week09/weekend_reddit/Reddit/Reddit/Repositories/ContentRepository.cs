@@ -45,5 +45,19 @@ namespace Reddit.Repositories
             contentContext.Contents.Update(content);
             contentContext.SaveChanges();
         }
+
+        internal void Vote(int id, string operation)
+        {
+            if (operation.Equals("plus"))
+            {
+                GetId(id).Votes++;
+            }
+            else if (operation.Equals("minus"))
+            {
+                GetId(id).Votes--;
+            }
+            contentContext.Update(GetId(id));
+            contentContext.SaveChanges();
+        }
     }
 }

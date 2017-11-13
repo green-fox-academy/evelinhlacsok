@@ -19,7 +19,7 @@ namespace Reddit.Controllers
         }
 
         [Route("")]
-        [Route("list")]
+      //  [Route("list")]
         [HttpGet]
         public IActionResult Index()
         {
@@ -62,6 +62,20 @@ namespace Reddit.Controllers
         public IActionResult Edit(Content content)
         {
             ContentRepository.Update(content);
+            return RedirectToAction("index");
+        }
+
+        [Route("vote/plus/{id}")]
+        public IActionResult UpVote(int id)
+        {
+            ContentRepository.Vote(id, "plus");
+            return RedirectToAction("index");
+        }
+
+        [Route("vote/minus/{id}")]
+        public IActionResult DownVote(int id)
+        {
+            ContentRepository.Vote(id, "minus");
             return RedirectToAction("index");
         }
     }

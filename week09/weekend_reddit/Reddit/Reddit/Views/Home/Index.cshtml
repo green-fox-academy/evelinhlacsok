@@ -20,8 +20,8 @@
 				<th>@item.Votes</th>
 				<th>@item.Post</th>
                 <th>
-                    <a href="/vote/up/@item.Id" title="I love it" class="upvote">+</a>
-                    <a href="/vote/down/@item.Id" title="I hate it" class="downvote">&nbsp-&nbsp</a>
+                    <a href="/vote/plus/@item.Id" title="I love it" class="upvote">+</a>
+                    <a href="/vote/minus/@item.Id" title="I hate it" class="downvote">&nbsp-&nbsp</a>
                 </th>
 				<th>
 					<form action="/(@item.Id)/update" method="post">
