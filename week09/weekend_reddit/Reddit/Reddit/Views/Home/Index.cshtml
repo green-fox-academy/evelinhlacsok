@@ -23,7 +23,12 @@
                     <a href="/vote/up/@item.Id" title="I love it" class="upvote">+</a>
                     <a href="/vote/down/@item.Id" title="I hate it" class="downvote">&nbsp-&nbsp</a>
                 </th>
-				<th>edit</th>
+				<th>
+					<form action="/(@item.Id)/update" method="post">
+                        <input type="hidden" name="Id" value="@item.Id" />
+                        <button id="table" class="number" type="submit">Edit</button>
+                    </form>
+				</th>
                 <th>
                     <form action="/(@item.Id)/delete" method="post">
                         <input type="hidden" name="Id" value="@item.Id" />
