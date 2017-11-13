@@ -7,8 +7,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	@*<h2 style="color:aqua">Editing Todo</h2>
-	<form method="post" action="/{id}/update" class="form-horizontal">
+	<h2 style="color:aqua">Editing Todo</h2>
+	<form method="post" action="/@Model.Id/edit" class="form-horizontal">
         <div class="form-group form-group-lg">
             <label class="col-sm-2 control-label" for="formGroupInputLarge" style="color:aqua">Task to update</label>
             <div class="col-sm-10">
@@ -20,10 +20,9 @@
             <div class="col-sm-offset-2 col-sm-10">
                  <div class="checkbox">
                 <label>
-                    <input name="IsUrgent" value="1" type="checkbox" 
-						@((Model.IsUrgent) ? "checked" : string.Empty)> Urgent
-                </label>
-                </div>
+				@Html.CheckBoxFor(c => c.IsUrgent)	
+						Urgent
+				</label></div>
             </div>
         </div>
 
@@ -31,8 +30,8 @@
             <div class="col-sm-offset-2 col-sm-10">
                  <div class="checkbox">
                 <label>
-                    <input name="IsDone" value="1" type="checkbox"
-						@((Model.IsDone) ? "checked" : string.Empty)> Done
+                    <input name="IsDone" type="checkbox" value="@Model.IsUrgent"
+						@*@((Model.IsDone) ? "checked" : string.Empty)*@> Done
                 </label>
                 </div>
             </div>
@@ -43,8 +42,8 @@
                 <button type="submit" class="btn btn-default" value="Submit">Save</button>
             </div>
         </div>
-        </form> *@
-	<h3 style="color:gold">Editing todo</h3>
+        </form> 
+	@*<h3 style="color:gold">Editing todo</h3>
 	@using (Html.BeginForm("edit", "todo"))
     {
     <input type="hidden" name="Id" value="@Model.Id" />
@@ -61,5 +60,5 @@
     <form><button style="color:gold" type="submit">Submit</button></form>
     }
 	<form action="/list" method="get"><button style="color:gold" type="submit">
-	Cancel</button></form> 
+	Cancel</button></form> *@
 </body>
