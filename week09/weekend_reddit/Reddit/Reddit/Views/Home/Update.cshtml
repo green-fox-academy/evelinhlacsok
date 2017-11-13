@@ -1,4 +1,5 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿@model Reddit.Models.Content
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Add to Reddit App</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
@@ -9,9 +10,9 @@
     <body>      
         <h2>hey</h2>
 
-        <form action="/update" method="post" class="form-group">
+        <form action="/@Model.Id/edit" method="post" class="form-group">
         <label for="Post">Post:</label> <br />
-        <input placeholder="@Model.Post" type="text" @*id="Post"*@ name="content"/> <br/> <br/>
+        <input placeholder="@Model.Post" type="text" @*id="Post"*@ name="Post"/> <br/> <br/>
         <button type="submit">Submit</button>
             
     </form>

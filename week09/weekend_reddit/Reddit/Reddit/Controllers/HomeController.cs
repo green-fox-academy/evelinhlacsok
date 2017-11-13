@@ -56,5 +56,13 @@ namespace Reddit.Controllers
             var content = ContentRepository.GetId(id);
             return View(content);
         }
+
+        [Route("/{id}/edit")]
+        [HttpPost]
+        public IActionResult Edit(Content content)
+        {
+            ContentRepository.Update(content);
+            return RedirectToAction("index");
+        }
     }
 }
