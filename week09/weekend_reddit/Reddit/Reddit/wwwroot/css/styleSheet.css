@@ -1,0 +1,27 @@
+﻿h3 {
+    color: gold;
+}
+
+span, p {
+    font-weight: bold;
+}
+
+table {
+    font-family: Verdana;
+    text-align: center;
+}
+
+th {
+    color: black;
+    background-color: mediumaquamarine;
+    border: 2px solid;
+    padding: 3px 5px 3px 5px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 5px 3px 5px 3px;
+    border: 2px solid black;
+}

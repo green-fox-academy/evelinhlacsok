@@ -12,6 +12,7 @@
     <Folder Include="Entities\" />
     <Folder Include="Repositories\" />
     <Folder Include="Views\Home\" />
+    <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
   <ItemGroup>
