@@ -19,6 +19,7 @@ namespace Reddit.Controllers
         }
 
         [Route("")]
+        [Route("list")]
         [HttpGet]
         public IActionResult Index()
         {
