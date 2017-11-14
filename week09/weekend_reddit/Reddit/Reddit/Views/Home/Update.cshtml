@@ -12,7 +12,9 @@
 
         <form action="/@Model.Id/edit" method="post" class="form-group">
         <label for="Post">Post:</label> <br />
-        <input placeholder="@Model.Post" type="text" @*id="Post"*@ name="Post"/> <br/> <br/>
+        <input placeholder="@Model.Post" type="text" @*id="Post"*@ name="Post"/>
+	    <input type="hidden" name="Votes" value="@Model.Votes"/>
+        <br/> <br/>
         <button type="submit">Submit</button>
             
     </form>
