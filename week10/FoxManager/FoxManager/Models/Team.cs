@@ -10,5 +10,3 @@ namespace FoxManager.Models
         public int ClassId { get; set; }
     }
 }
-
-
