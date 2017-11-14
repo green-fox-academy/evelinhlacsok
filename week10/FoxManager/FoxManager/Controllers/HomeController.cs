@@ -20,10 +20,11 @@ namespace FoxManager.Controllers
             FoxManagerRepository = foxManagerRepository;
         }
 
-        [Route("/home")]
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            var list = FoxManagerRepository.GetStudentList();
+            return View(FoxManagerRepository.GetStudentList());
         }
     }
 }

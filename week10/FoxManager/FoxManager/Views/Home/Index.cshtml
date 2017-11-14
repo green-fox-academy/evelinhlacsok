@@ -1,17 +1,37 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿@model System.Collections.Generic.List<FoxManager.Models.Student>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Fox Manager App</title>
     </head>
     <body>   
 		<div class="navigation-bar">
         <div id="navigation-container">
-            <img src="logo.png"> 
+        <img src="logo.png"> 
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Teams</a></li>
                 <li><a href="#">Classes</a></li>
-            </ul>
+             </ul>
+				
+		<table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Team Id</th>
+                <th>Class Id</th>
+            </tr>
+				@foreach (var student in @Model)
+            {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.Name</td>
+                <td>@student.TeamId</td>
+                <td>@student.ClassId</td>
+            </tr>
+            }
+		    </table>
         </div>
-    </div>
+        </div>
     </body>
 </html>
