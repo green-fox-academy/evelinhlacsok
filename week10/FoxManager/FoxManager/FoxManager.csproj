@@ -12,6 +12,7 @@
     <Folder Include="Repositories\" />
     <Folder Include="Entities\" />
     <Folder Include="Views\Home\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
 
   <ItemGroup>

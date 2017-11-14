@@ -10,7 +10,7 @@ using FoxManager.Repositories;
 
 namespace FoxManager.Controllers
 {
-    [Route("")]
+    [Route("/home")]
     public class HomeController : Controller
     {
         private FoxManagerRepository FoxManagerRepository;
@@ -20,7 +20,7 @@ namespace FoxManager.Controllers
             FoxManagerRepository = foxManagerRepository;
         }
 
-        [Route("")]
+        [Route("/home")]
         public IActionResult Index()
         {
             return View();
