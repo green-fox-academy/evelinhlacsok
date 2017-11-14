@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FoxManager.Entities;
+using FoxManager.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -18,8 +20,8 @@ namespace FoxManager
         {
 
             services.AddMvc();
-            services.AddDbContext<ContentContext>(options => options.UseSqlite("Data Source=redditdatabase.db"));
-            services.AddScoped<ContentRepository>();
+            services.AddDbContext<FoxManagerContext>(options => options.UseSqlite("Data Source=foxmanagerdatabase.db"));
+            services.AddScoped<FoxManagerRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -13,5 +13,6 @@ namespace FoxManager.Entities
         public DbSet<Class> Classes { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Team> Teams { get; set; }
+        public DbSet<Task> Tasks { get; set; }
     }
 }
