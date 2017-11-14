@@ -6,7 +6,7 @@
 	    <link href="@Url.Content("~/css/styleSheet.css")" rel="stylesheet" type="text/css" />
     </head>
     <body>
-		<h3>Reddit</h3>
+		<h2>Reddit</h2>
 		<table>
 			<tr>
 				<th>Score</th>
@@ -14,28 +14,30 @@
 				<th>Action</th>
                 <th>Edit</th>
                 <th>Delete</th>
+				<th>Date</th>
 			</tr>
 			@foreach (var item in @Model)
 			{
 			<tr>
-				<th>@item.Votes</th>
-				<th>@item.Post</th>
-                <th>
+				<td>@item.Votes</td>
+				<td>@item.Post</td>
+                <td>
                     <a href="/vote/plus/@item.Id" title="I love it" class="upvote">+</a>
                     <a href="/vote/minus/@item.Id" title="I hate it" class="downvote">&nbsp-&nbsp</a>
-                </th>
-				<th>
+                </td>
+				<td>
 					<form action="/(@item.Id)/update" method="post">
                         <input type="hidden" name="Id" value="@item.Id" />
                         <button id="table" class="number" type="submit">Edit</button>
                     </form>
-				</th>
-                <th>
+				</td>
+                <td>
                     <form action="/(@item.Id)/delete" method="post">
                         <input type="hidden" name="Id" value="@item.Id" />
                         <button id="table" class="number" type="submit">Delete</button>
                     </form>
-                </th>
+                </td>
+				<td>@item.Date.ToString("MM/dd/yy H:mm:ss")</td>
 			</tr>
 			}
 		</table>

@@ -11,9 +11,10 @@ using System;
 namespace Reddit.Migrations
 {
     [DbContext(typeof(ContentContext))]
-    partial class ContentContextModelSnapshot : ModelSnapshot
+    [Migration("20171114084351_DateMigration")]
+    partial class DateMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -1,5 +1,6 @@
-﻿h3 {
+﻿h2 {
     color: gold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 span, p {
@@ -9,11 +10,12 @@ span, p {
 table {
     font-family: Verdana;
     text-align: center;
+    color:#AA4465;
 }
 
 th {
     color: black;
-    background-color: mediumaquamarine;
+    background-color: #861657;
     border: 2px solid;
     padding: 3px 5px 3px 5px;
     font-weight: bold;
