@@ -52,5 +52,14 @@ namespace RedditApi.Repositories
             PostContext.Reddit.Update(post);
             PostContext.SaveChanges();
         }
+
+        public void UpdateTitle(int id, Post post)
+        {
+            var selectedPost = GetPostById(id);
+
+            selectedPost.Title = post.Title;
+            PostContext.Reddit.Update(selectedPost);
+            PostContext.SaveChanges();
+        }
     }
 }

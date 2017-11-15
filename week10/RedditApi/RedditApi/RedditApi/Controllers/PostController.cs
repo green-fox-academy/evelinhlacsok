@@ -49,5 +49,13 @@ namespace RedditApi.Controllers
             PostRepository.DownVote(id);
             return Json(PostRepository.GetPostById(id));
         }
+
+        [HttpPut]
+        [Route("posts/{id}")]
+        public IActionResult UpdateTitle(int id, [FromBody]Post post)
+        {
+            PostRepository.UpdateTitle(id, post);
+            return Json(post);
+        }
     }
 }
