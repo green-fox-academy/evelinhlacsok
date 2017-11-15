@@ -67,7 +67,7 @@ namespace RedditApi.Repositories
             var post = GetPostById(id);
 
             PostContext.Reddit.Remove(post);
-            PostContext.SaveChanges();
+            PostContext.SaveChanges( );
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -19,7 +20,7 @@ namespace RedditApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<PostContext>(options => options.UseSqlite("Data Source=postdatabase.db"));
+            services.AddDbContext<PostContext>(options => options.UseSqlite("Data Source=" +Path.Combine(Directory.GetCurrentDirectory(), "postdatabase.db")));
             services.AddScoped<PostRepository>();
         }
 

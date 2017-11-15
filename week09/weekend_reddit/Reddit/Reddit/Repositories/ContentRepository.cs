@@ -18,7 +18,10 @@ namespace Reddit.Repositories
 
         public List<Content>GetList()
         {
-            return contentContext.Contents.OrderByDescending(x=> x.Votes).ToList();
+            // lists all posts in a descending order
+            // return contentContext.Contents.OrderByDescending(x=> x.Votes).ToList();
+
+            return contentContext.Contents.OrderByDescending(p => p.Votes).Take(10).ToList();
         }
 
         public void AddPost(string post)
