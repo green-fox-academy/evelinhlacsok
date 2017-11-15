@@ -13,6 +13,7 @@
     <Folder Include="Entities\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Login\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,4 +24,7 @@
   <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
   </ItemGroup>
   
+ <ItemGroup>
+   <Compile Remove="Services\StudentService.cs" />
+ </ItemGroup>
 </Project>

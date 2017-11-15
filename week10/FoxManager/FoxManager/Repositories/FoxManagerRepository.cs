@@ -16,14 +16,31 @@ namespace FoxManager.Repositories
             this.FoxManagerContext = foxManagerContext;
         }
 
-        public Student GetStudentId(int id)
+        //public Student GetStudentId(int id)
+        //{
+        //    return FoxManagerContext.Students.FirstOrDefault(x => x.Id == id);
+        //}
+
+        //public List<Student> GetStudentList()
+        //{
+        //    return FoxManagerContext.Students.ToList();
+        //}
+
+        public bool CheckStudentExist(string name)
         {
-            return FoxManagerContext.Students.FirstOrDefault(x => x.Id == id);
+            var user = FoxManagerContext.Students.FirstOrDefault(x => x.Name.Equals(name));
+            return user != null ? true : false;
         }
 
-        public List<Student> GetStudentList()
+        public Student GetStudentInfo(string name)
         {
-            return FoxManagerContext.Students.ToList();
+            return FoxManagerContext.Students.FirstOrDefault(y => y.Name.Equals(name));
+        }
+
+        public List<Task> GetStudentProjectList(string name)
+        {
+            return FoxManagerContext.Tasks.Where(p => p.Student.StudentName.Equals(name))
+                .ToList();
         }
 
 

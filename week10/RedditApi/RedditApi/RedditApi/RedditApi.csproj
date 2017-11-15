@@ -7,23 +7,14 @@
   <ItemGroup>
     <Folder Include="wwwroot\" />
     <Folder Include="Models\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Views\" />
-    <Folder Include="Entities\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Views\Home\" />
-    <Folder Include="wwwroot\css\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-  <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="appsettings.json" />
-  </ItemGroup>
 </Project>
