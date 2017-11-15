@@ -57,5 +57,11 @@ namespace RedditApi.Controllers
             PostRepository.UpdateTitle(id, post);
             return Json(post);
         }
+
+        [HttpDelete("posts/{id}/delete")]
+        public void Delete(int id)
+        {
+            PostRepository.Delete(id);
+        }
     }
 }
