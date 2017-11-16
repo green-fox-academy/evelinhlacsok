@@ -20,7 +20,7 @@ namespace RedditApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<PostContext>(options => options.UseSqlite("Data Source=" +Path.Combine(Directory.GetCurrentDirectory(), "postdatabase.db")));
+            services.AddDbContext<PostContext>(options => options.UseSqlite("Data Source=postdatabase.db"));
             services.AddScoped<PostRepository>();
         }
 

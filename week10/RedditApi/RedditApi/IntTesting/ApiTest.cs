@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.TestHost;
 using System.Threading.Tasks;
 using System.Net;
 
-namespace IntegrationTesting
+namespace RedditApi.IntTesting
 {
     public class ApiTest
     {
@@ -24,7 +24,6 @@ namespace IntegrationTesting
         [Fact]
         public async Task ReturnWithOkStatus()
         {
-           // Assert.True(false);
             var response = await Client.GetAsync("/posts");
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
