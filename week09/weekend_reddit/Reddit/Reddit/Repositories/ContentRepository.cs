@@ -19,9 +19,13 @@ namespace Reddit.Repositories
         public List<Content>GetList()
         {
             // lists all posts in a descending order
-            // return contentContext.Contents.OrderByDescending(x=> x.Votes).ToList();
+             return contentContext.Contents.OrderByDescending(x=> x.Votes).ToList();
 
-            return contentContext.Contents.OrderByDescending(p => p.Votes).Take(10).ToList();
+            // list the first popular 10 posts
+            // return contentContext.Contents.OrderByDescending(p => p.Votes).Take(10).ToList();
+
+            // lists the ones starting with letter c
+            // return contentContext.Contents.Where(x => x.Post.StartsWith("c")).ToList();
         }
 
         public void AddPost(string post)
