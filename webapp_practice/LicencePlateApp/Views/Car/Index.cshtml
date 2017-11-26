@@ -6,6 +6,24 @@
     <title>Licence Plate</title>
 </head>
 <body>
-    <h3>hi</h3>
+    <h3>Search</h3>
+		<table>
+            <tr>
+                <th>Plate</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Color</th>
+                <th>Year</th>
+            </tr>
+            @foreach (var item in @Model)
+            {
+            <tr>
+                <td>@item.Plate</td>
+                <td>@item.Car_model</td>
+                <td>@item.Color</td>
+				<td>@item.Year</td>
+            </tr>
+            }
+        </table>
 </body>
 </html>
