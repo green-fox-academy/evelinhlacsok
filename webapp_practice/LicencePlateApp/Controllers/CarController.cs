@@ -12,7 +12,6 @@ namespace LicencePlateApp.Controllers
     [Route("")]
     public class CarController : Controller
     {
-
         CarRepository CarRepository;
 
         public CarController(CarRepository carRepository)
@@ -20,10 +19,11 @@ namespace LicencePlateApp.Controllers
             CarRepository = carRepository;
         }
 
-        // GET: /<controller>/
+        [HttpGet]
+        [Route("")]
         public IActionResult Index()
         {
-            return View();
+            return View(CarRepository.GetAllCars());
         }
     }
 }
