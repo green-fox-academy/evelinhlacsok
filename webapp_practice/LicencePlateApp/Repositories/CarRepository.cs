@@ -11,6 +11,5 @@ namespace LicencePlateApp.Repositories
         {
             CarContext = carContext;
         }
-
     }
 }
