@@ -1,12 +1,18 @@
 ﻿
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>Licence Plate</title>
-</head>
-<body>
-    <h3>Search</h3>
+    <head>
+        <meta charset="utf-8" />
+        <title>Licence Plate</title>
+    </head>
+    <body>
+        <h3>Search</h3>
+            <form action="/search" method="get" class="form-group">
+            <label for="Plate">Plate licence:</label> <br />
+            <input type="text" name="Plate"/> <br/> <br/>
+            <button type="submit">Search</button>
+			</form>
+        <br/>
 		<table>
             <tr>
                 <th>Plate</th>
@@ -25,5 +31,5 @@
             </tr>
             }
         </table>
-</body>
+    </body>
 </html>
