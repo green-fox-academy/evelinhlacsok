@@ -32,5 +32,12 @@ namespace LicencePlateApp.Controllers
         {
             return View("Index", CarRepository.GetResultFromDb(plate));
         }
+
+        [HttpGet]
+        [Route("/search/police")]
+        public IActionResult PoliceCars()
+        {
+            return View("Index", CarRepository.PoliceCars());
+        }
     }
 }

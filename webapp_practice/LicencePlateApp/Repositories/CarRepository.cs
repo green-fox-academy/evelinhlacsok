@@ -39,5 +39,10 @@ namespace LicencePlateApp.Repositories
             }
             return GetAllCars();
         }
+
+        public List<Car> PoliceCars()
+        {
+            return CarContext.Licence_Plates.Where(x => x.Plate.StartsWith("RB")).ToList();
+        }
     }
 }
