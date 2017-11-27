@@ -39,5 +39,12 @@ namespace LicencePlateApp.Controllers
         {
             return View("Index", CarRepository.PoliceCars());
         }
+
+        [HttpGet]
+        [Route("search/diplomat")]
+        public IActionResult DiplomatCars()
+        {
+            return View("Index", CarRepository.DiplomatCars());
+        }
     }
 }

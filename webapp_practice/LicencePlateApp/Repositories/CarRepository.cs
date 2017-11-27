@@ -44,5 +44,10 @@ namespace LicencePlateApp.Repositories
         {
             return CarContext.Licence_Plates.Where(x => x.Plate.StartsWith("RB")).ToList();
         }
+
+        public List<Car> DiplomatCars()
+        {
+            return CarContext.Licence_Plates.Where(x => x.Plate.StartsWith("DT")).ToList();
+        }
     }
 }
